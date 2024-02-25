@@ -123,7 +123,28 @@
 % ----------------------------------------------------------------------
 %  Soubor s makry
 % ----------------------------------------------------------------------
-\input{tex/makra}
+%\input{tex/makra}
+
+% ----------------------------------------------------------------------
+%  Vlastní příkazy
+% ----------------------------------------------------------------------
+
+
+%  Matematika
+\newcommand{\ee}{\mathrm{e}} %eulerovo číslo
+\newcommand{\ii}{\mathrm{i}} %imaginární jednotka
+
+% Jednotky
+%\newcommand{\unit}[1]{\,\mathrm{#1}} %jednotky zadávejte pomocí tohoto příkazu
+\renewcommand{\deg}{\ensuremath{\mathring{\;}}} %symbol stupně
+\newcommand{\celsius}{\ensuremath{\deg\mathrm{C}}} %stupně celsia
+
+%(hodnota plus mínus chyba) jednotka
+\newcommand{\hodn}[3]{(#1 \pm #2)\unit{#3}} 
+
+%veličina [jednotka] do hlavičky tabulky
+\newcommand{\tabh}[2]{\ensuremath{#1\,[\mathrm{#2}]}}
+
 %  nachází se ve složce /tex/
 
 
