@@ -134,6 +134,7 @@
         \hline
         \end{tabular}
     \end{table}
+\newpage
 
 \subsection{Teplota vody}
 
@@ -154,27 +155,68 @@
         \end{tabular}
     \end{table}
 
-    Na základě této teploty lze určit podle tabulek hustotu vody, která je 997,818 \SI{}{\kg\water\per\m\cubed\air}.
+    Na základě této teploty lze určit podle tabulek hustotu vody, která je 997,818 \SI{}{\kg\water\per\m\cubed\air}. Pro naše měření bude však pracovat s hodnotou 997(1) \SI{}{\kg\water\per\m\cubed\air}.
 
 \subsection{Závislost objemového průtoku na úbytku tlaku}
 
     Závislost průtoku na tlaku byla měřena pomocí odměrného válce a ručních stopek. Množství vody a tedy její rychlost a změna tlaku byla regulována otočným kohoutem. Na začátku měření trubice byla stupnice manometru přibližně rozdělena do oblastí, kde dochází k laminárnímu proudění a kde ne. Díky to bylo možné naplánovat jednotlivá měření pro dostatek dat v laminární oblasti.
 
-    V určité výšce manometru byl nastaven určitý tlak a poté změřen objem kapaliny proteklý trubicí za čas. V oblasti turbulentního proudění hladina vody v manometru neustále oscilovala, proto byla výška v tomto případě nastavena tak, aby hladina oscilovala kolem měřené hodnoty. Čas byl měřen pomocí stopek, kde počítáme s odchylkou reakční doby člověka.
+    V určité výšce manometru byl nastaven určitý tlak a poté změřen objem kapaliny proteklý trubicí za čas. V oblasti turbulentního proudění hladina vody v manometru neustále oscilovala, proto byla výška v tomto případě nastavena tak, aby hladina oscilovala kolem měřené hodnoty. Díky poměrně přesné milimetrové stupnici manometru byla nejistota výšky (\h)\ odhadnuta na 0,05 cm ve stabilní oblasti laminárního proudění, v ostatních případech na 0,2 cm. Čas byl měřen pomocí stopek, kde počítáme s odchylkou reakční doby člověka, která je rovna přibližně 0,2 s. Nejistota měření objemu byla určena 10 ml pro trubici C, pro trubici A a B 2 ml. Tato chyba u trubice C je dána použitím méně přesného odměrného válce.
     
     Chyba \(\Delta p\) byla vypočtena pomocí metody přenosu chyb podle
 
     \begin{equation}
-        \sigma_\Delta_p = \sigma_h \rho g 
+        \frac{\sigma_\Delta_p}{\Delta_p} = \sqrt{(\frac{\sigma_h}{h})^2 + (\frac{\sigma_\rho}{\rho})^2}
     \end{equation}
 
     Chyba objemového průtoku \(Q_V\) byla vypočtena také podle metody přenosu chyb jako
 
     \begin{equation}
-        \frac{\sigma_Q__V}{\frac{V}{t}} = \sqrt{(\frac{\sigma_V}}{V})^2+(\frac{\sigma_t}{t})^2
+        \frac{\sigma_Q__V}{\frac{V}{t}} = \sqrt{(\frac{\sigma_V}{V})^2+(\frac{\sigma_t}{t})^2}
     \end{equation}
 
-\subsubsection{Trubice A}
+    \begin{table}[h]
+        \centering
+        \caption{Trubice A}
+        \label{tab:trubice A}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+            h / cm   & V / ml  & t / s      & ∆p / Pa & Q_V / 10^{-6} \frac{m^3}{s}  \\ 
+        \hline
+            11(0.05)     & 200(2)    & 100,1(2) & 1077(5)   & 2,0(0,2)     \\
+            12(0.05)     & 85(2)     & 37,3(2)  & 1175(5)   & 2,3(0,5)     \\
+            14(0.05)     & 100(2)    & 36,5(2)  & 1370(5)   & 2,7(0,6)     \\
+            15(0.05)     & 115(2)    & 39,3(2)  & 1468(5)   & 2,9(0,5)     \\
+            16(0.05)     & 135(2)    & 41,7(2)  & 1566(5)   & 3,2(0,5)     \\
+            17(0.05)     & 200(2)    & 60,7(2)  & 1664(5)   & 3,3(0,3)     \\
+            18(0.05)     & 200(2)    & 57,2(2)  & 1762(5)   & 3,5(0,4)     \\
+            20(0.05)     & 175(2)    & 49,8(2)  & 1958(5)   & 3,5(0,4)     \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[h]
+        \centering
+        \caption{Trubice B}
+        \label{tab:trubice B}
+        \begin{tabular}{|c|c|c|c|c|} 
+        \hline
+            h / cm & V / ml & t / s & p / Pa & Q_V / 10^{-6} \frac{m^3}{s}    \\ 
+        \hline
+            7(0,05)      & 205(2)    & 47,5(2)  & 685(5)    & 4,3(0,5)  \\
+            8(0,05)      & 205(2)    & 42,6(2)  & 783(5)    & 4,8(0,5)  \\
+            9(0,05)      & 195(2)    & 37,7(2)  & 881(5)    & 5,2(0,6)  \\
+            10(0,05)     & 200(2)    & 34,4(2)  & 979(5)    & 5,8(0,7)  \\
+            11(0,05)     & 205(2)    & 34,4(2)  & 1077(5)   & 6,0(0,7)  \\
+            12(0,05)     & 205(2)    & 31,9(2)  & 1175(5)   & 6,4(0,7)  \\
+            13(0,2)     & 230(2)    & 34,5(2)  & 1273(20)   & 6,7(0,7)  \\
+            14(0,2)     & 200(2)    & 27,5(2)  & 1370(20)   & 7,3(0,9)  \\
+            15(0,2)     & 200(2)    & 26,4(2)  & 1468(20)   & 7,6(1)  \\
+            16(0,2)     & 195(2)    & 24,9(2)  & 1566(20)   & 7,8(1)  \\
+            17(0,2)     & 195(2)    & 24,5(2)  & 1664(20)   & 7,9(1)  \\
+        \hline
+        \end{tabular}
+    \end{table}
 
     \begin{table}[h]
         \centering
@@ -182,30 +224,30 @@
         \label{tab:trubice C}
         \begin{tabular}{|c|c|c|c|c|}
         \hline
-            h / cm   & V / ml  & t / s      & ∆p / Pa & Q / 10^{-6} m^3 s^−1  \\ 
+            h / cm   & V / ml  & t / s      & ∆p / Pa & Q_V / 10^{-6} \frac{m^3}{s}  \\ 
         \hline
-            23(0,05) & 200(10) & 20,72(20)  & 2251,4  & 0,965             \\
-            22(0,05) & 200(10) & 21,50(20)  & 2153,5  & 0,930             \\
-            21(0,05) & 200(10) & 21,59(20)  & 2055,6  & 0,926             \\
-            20(0,05) & 200(10) & 22,38(20)  & 1957,7  & 0,894             \\
-            19(0,05) & 200(10) & 23,34(20)  & 1859,8  & 0,857             \\
-            18(0,05) & 200(10) & 23,81(20)  & 1761,9  & 0,840             \\
-            17(0,05) & 200(10) & 24,60(20)  & 1664,1  & 0,813             \\
-            16(0,05) & 200(10) & 25,19(20)  & 1566,2  & 0,794             \\
-            15(0,05) & 200(10) & 26,91(20)  & 1468,3  & 0,743             \\
-            14(0,05) & 200(10) & 26,97(20)  & 1370,4  & 0,742             \\
-            13(0,05) & 200(10) & 28,12(20)  & 1272,5  & 0,711             \\
-            12(0,05) & 200(10) & 28,00(20)  & 1174,6  & 0,714             \\
-            11(0,05) & 200(10) & 28,41(20)  & 1076,7  & 0,704             \\
-            10(0,05) & 200(10) & 29,10(20)  & 978,9   & 0,687             \\
-            9(0,05)  & 200(10) & 29,22(20)  & 881,0   & 0,684             \\
-            8(0,05)  & 200(10) & 31,03(20)  & 783,1   & 0,645             \\
-            7(0,05)  & 200(10) & 33,44(20)  & 685,2   & 0,598             \\
-            6(0,05)  & 200(10) & 37,78(20)  & 587,3   & 0,529             \\
-            5(0,05)  & 200(10) & 42,69(20)  & 489,4   & 0,468             \\
-            4(0,05)  & 200(10) & 51,06(20)  & 391,5   & 0,392             \\
-            3(0,05)  & 200(10) & 69,81(20)  & 293,7   & 0,286             \\
-            2(0,05)  & 200(10) & 105,82(20) & 195,8   & 0,189             \\
+            23(0,2) & 200(10) & 20,7(2)  & 2251(20)  & 9,7(5)             \\
+            22(0,2) & 200(10) & 21,5(2)  & 2154(20)  & 9,3(5)             \\
+            21(0,2) & 200(10) & 21,6(2)  & 2056(20)  & 9,3(5)             \\
+            20(0,2) & 200(10) & 22,4(2)  & 1958(20)  & 8,9(5)             \\
+            19(0,2) & 200(10) & 23,3(2)  & 1860(20)  & 8,6(4)             \\
+            18(0,2) & 200(10) & 23,8(2)  & 1762(20)  & 8,4(4)             \\
+            17(0,2) & 200(10) & 24,6(2)  & 1664(20)  & 8,1(4)             \\
+            16(0,2) & 200(10) & 25,2(2)  & 1566(20)  & 7,9(4)             \\
+            15(0,2) & 200(10) & 26,9(2)  & 1468(20)  & 7,4(4)             \\
+            14(0,2) & 200(10) & 27,0(2)  & 1370(20)  & 7,4(4)             \\
+            13(0,2) & 200(10) & 28,1(2)  & 1273(20)  & 7,1(4)             \\
+            12(0,2) & 200(10) & 28,0(2)  & 1175(20)  & 7,1(4)             \\
+            11(0,2) & 200(10) & 28,4(2)  & 1077(20)  & 7,0(4)             \\
+            10(0,2) & 200(10) & 29,1(2)  & 979(20)   & 6,9(3)             \\
+            9(0,05)  & 200(10) & 29,2(2)  & 881(5)   & 6,8(3)             \\
+            8(0,05)  & 200(10) & 31,0(2)  & 783(5)   & 6,5(3)             \\
+            7(0,05)  & 200(10) & 33,4(2)  & 685(5)   & 6,0(3)             \\
+            6(0,05)  & 200(10) & 37,8(2)  & 587(5)   & 5,3(3)             \\
+            5(0,05)  & 200(10) & 42,7(2)  & 489(5)   & 4,7(2)             \\
+            4(0,05)  & 200(10) & 51,1(2)  & 392(5)   & 3,9(2)             \\
+            3(0,05)  & 200(10) & 69,8(2)  & 294(5)   & 2,7(1)             \\
+            2(0,05)  & 200(10) & 105,8(2) & 196(5)   & 1,9(1)             \\
         \hline
         \end{tabular}
     \end{table}
