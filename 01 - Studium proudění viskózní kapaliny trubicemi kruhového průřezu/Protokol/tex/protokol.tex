@@ -57,7 +57,19 @@
         Re = \frac{r\rho v_s}{\eta},
     \end{equation}
 
-    kde \(v_s\) je střední rychlost proudění v trubici. Tato oblest je však určena pouze přibližně.
+    kde \(v_s\) je střední rychlost proudění v trubici. Tato oblast je však určena pouze přibližně.
+
+    \(v_s\) lze vyjádřit jako
+
+    \begin{equation}
+        v_s = \frac{Q_V}{\pi r^2}
+    \end{equation}
+
+    Úpravou lze součinitel odporu trubice \(k\) na základě naměřených hodnot vyjádřit jako
+
+    \begin{equation}
+        k = \frac{2r^5\pi^2\Delta p}{\rho Q_V^2 l}
+    \end{equation}
 
     Pro laminární proudění platí teoretický vztah
 
@@ -87,7 +99,7 @@
         \label{tab:lab_pod}
         \begin{tabular}{|c|c|c|} 
         \hline
-            t [°C] & p [hPa] & vlhkost [\%RH]  \\ 
+            t / °C & p / hPa & vlhkost / \%RH  \\ 
         \hline
             22,9(40)   & 977,2(20)   & 34,7(25)            \\
         \hline
@@ -146,7 +158,7 @@
         \label{tab:teploty_vody}
         \begin{tabular}{|c|} 
         \hline
-            t [°C]   \\ 
+            t / °C   \\ 
         \hline
             21,8(5)  \\
             22,1(5)  \\
@@ -251,13 +263,88 @@
         \hline
         \end{tabular}
     \end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{01 - Studium proudění viskózní kapaliny trubicemi kruhového průřezu//Protokol//img/Trubice A, B a C.png}
+    \caption{Graf závislosti objemového průtoku na poklesu tlaku trubic}
+    \label{fig:graf trubic}
+\end{figure}
+
+    U závislosti každé trubice byla určena lineární regrese v oblastech laminárního proudění. Tento fit je vážen nejistotou jednotlivých měření. Je zde určena i standardní chyba, která byla škálována s druhou odmocninou redukovaného chi-kvadrátu. Podle vztahu (3) pro směrnici grafu platí
+
+    \begin{equation}
+        f = \frac{\pi r^4}{8 \eta l}
+    \end{equation}
+
+    dynamická viskozita vody má při naší teplotě hodnotu
+
+    \begin{equation}
+        \eta = 950 \cdot 10^{-6} Pa \cdot s
+    \end{equation}
+
+    Jednotlivé směrnice závislostí jsou
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|} 
+        \hline
+            Trubice & Směrnice se standardní chybou / kg^{-1} m^{4} s  \\ 
+        \hline
+            A       & (2,0 \pm 0,2) \cdot 10^{-9}                                \\
+            B       & (4,3 \pm 0,2) \cdot 10^{-9}                                \\
+            C       & (8,4 \pm 0,4) \cdot 10^{-9}                                \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    Ze vztahu (9) lze odvodit rovnost pro výpočet poloměru trubice ze směrnice
+
+    \begin{equation}
+        r = \sqrt[4]{\frac{8\eta fl}{\pi}}
+    \end{equation}
+
+    Poté můžeme porovnat výsledky průměry trubic změřené plastovým posuvným měřidlem a výpočtem ze směrnice. Rovnost (11) nám dává pouze poloměr, proto musíme výsledek ještě vynásobit dvěma.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|} 
+        \hline
+            Trubice & Vnitřní průměr podle měřidla / mm & Vnitřní průměr ze směrnice / mm  \\ 
+        \hline
+            A       & 2,1                           & 2,1                              \\
+            B       & 2,6                           & 2,5                              \\
+            C       & 3,0                           & 2,8                              \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+\subsection{Součinitel odporu trubice}
+
+    Nyní dosadíme upravený poloměr do vztahu (4) pro výpočet Reynoldsova čísla (6) pro součinitel odporu trubice. Tyto hodnoty pak porovnáme s teoretickou závislostí (7).
+
+    
     
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+    Z obrázku \ref{fig:graf trubic} je možné vyčíst do jaké výšky manometru leží jednotlivé výsledky na přímce a tedy mají laminární průběh.
+
+    Trubice A je ve všech měřených bodech laminární. To se shoduje i s pozorováním v průběhu měření. Na grafu je vidět bod s výškou 20 cm, který je jako jediný vzdálený od fitované přímky. Jedná se pravděpodobně o nepřesnost měření způsobená vysokou výškou hladiny vody v manometru, kde již může být zhoršená přesnost měření.
+
+    V trubici B leží body na přímce do výšky 12 cm, což se také plně shoduje s pozorováním. Bod ve výšce 10 cm také pravděpodobně nese malou nepřesnost měření.
+
+    V případě trubice C lineární regrese prochází celkem 7 body, což odpovídá do výšky 8 cm. Ve skutečnosti bylo pozorováno laminární chování (hladina vody v manometru neoscilovala) v oblasti s alespoň o 5 cm vyšší hladinou, než vychází z grafu. Bodů pro analýzu bylo změřeno dostatek, ale vylepšit tento experiment lze měřením objemu vody proteklou trubicí s vyšší přesností.
+
+    Avšak i přes nižší přesnost měření u trubice C je nejistota přijatelná, jak vidíme na obrázku \ref{fig:graf trubic}. U trubic A a B je chyba měření tak malá, že ani nejsou na grafu vidět jednotlivé chybové úsečky.
+
+    V porovnání vnitřních průměrů trubic změřených nepřesným plastovým posuvným měřidlem a vypočteným ze směrnice grafu rozdíl vyšel překvapivě nízký, téměř zanedbatelný. Plastové měřidlo již bylo lehce opotřebované a trubice nemusela mít ve všech směrech stejný průměr. Díky těmto vynikajícím výsledkům jsme ověřili, že takto zvolené směrnice přímek jsou vhodné dobře odpovídající realitě.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+    V tomto experimentu jsme úspěšně změřily závislosti objemových průtoků na úbytku statického tlaku všech třech trubic. Poté jsme sestrojili jednotlivé grafy a určili oblasti laminárního proudění. Jak ukazují výpočty, tyto oblasti byly vhodně zvoleny.
