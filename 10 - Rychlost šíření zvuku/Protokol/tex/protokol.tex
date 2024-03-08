@@ -99,6 +99,7 @@ kde k je přirozené číslo a udává počet půlvln v rezonátoru. Dosazením 
 \end{equation}
 
 kde \(\mu\) je molekulová hmotnost plynu, R molární plynová konstanta a T teplota.
+
 Ve druhém případě necháme konstantní frekvenci a změnou délky l rezonátoru hledáme odpovídající rezonanci. Pro rychlost platí
 
 \begin{equation}
@@ -225,7 +226,7 @@ kde chyba je rovna
 
 \subsection{Uzavřený rezonátor}
 
-Základní frekvence rezonátoru byla odhadnuta podle (8) na 214 Hz. V tabulce \ref{tab:rezonanční-frekvence} je vidět, že přesně toto číslo potvrdil i experiment, což znamená, že je to správný odhad a že se v trubici nenachází žádný jiný plyn z předchozích měření. Při konstantní délce rezonátoru l = 0,80(02) m jsme hledali maximální výchylky na voltmetru.
+Základní frekvence rezonátoru se vzduchem byla odhadnuta podle (8) na 214 Hz. Pro oxid uhličitý je tato teoretická hodnota 161 Hz. Při konstantní délce rezonátoru l = 0,80(02) m jsme hledali maximální výchylky na voltmetru.
 
 \begin{table}[h]
 \centering
@@ -249,14 +250,124 @@ k  & \nu_{vzduch} / Hz & \nu_{CO_2} / Hz  \\
 \end{tabular}
 \end{table}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{10 - Rychlost šíření zvuku//Protokol//img/Rezonanční frekvence.png}
+    \caption{Rezonanční frekvence}
+    \label{fig:rezonanční-frekvence}
+\end{figure}
 
+Z lineárního fit z grafu můžeme odečíst směrnice přímek
+
+\begin{equation}
+    \nonumber
+    a_{vzduch} = 214,4(3) \; Hz
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    a_{CO_2} = 168,0(3) \; Hz
+\end{equation}
+
+Ze vztahu (8) vyjádříme \(\nu_k\) a můžeme tak porovnat kvalitu fitu s experimentálními výsledky
+
+\begin{equation}
+    \nu_k = \frac{c}{2l} k
+\end{equation}
+
+Pro rychlosti šíření vypočtené ze směrnice platí
+
+\begin{equation}
+    \nonumber
+    c_{vzduch} = 342(1) \; m \cdot s^{-1}
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    c_{CO_2} = 269(1) \; m \cdot s^{-1}
+\end{equation}
+
+kde nejistota měření je opět dána metodou přenosu chyb
+
+\begin{equation}
+    \sigma_c = 2\sqrt{l^2 \sigma^2_a + a^2 \sigma^2_l}
+\end{equation}
+
+Poissonovu konstantu pro oxid uhličitý vypočítáme pomocí vztahu (9). Molekulová hmotnost \(\mu\) = 44 \(g/mol\) a molární plynová konstanta \(R\) = 8,314 \(J \cdot K^{-1} \cdot mol^{-1}\)
+
+\begin{equation}
+    \nonumber
+    \kappa = 1,29(1)
+\end{equation}
+
+V druhém případě při konstantní frekvenci \(\nu\) = 2148 \(Hz\) byla měněna délka trubice a pozorováno, jak se mění rezonance. Při této frekvenci se v trubici nachází 10 půlvln. Nejistota měření délky je 0,5 mm. Délka trubice byla zkrácena o 80 mm, kdy došlo k další rezonanci. Podle rovnice (10) dostáváme rychlost vzduchu
+
+\begin{equation}
+    \nonumber
+    c = 344(3) \; m \cdot s^{-1}
+\end{equation}
+
+kde chyba je dána metodou přenosu chyb jako
+
+\begin{equation}
+    \sigma_c = 2\nu \sqrt{2\sigma^2_l}
+\end{equation}
 
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Metodou měření pomocí Kundtovy trubice jsme dostaly rychlost zvuku, která odpovídá tabulkové hodnotě 3400 \(m \cdot s^{-1}\). Tato rychlost je však určena s poměrně velkou chybou, která je daná nepřesným měřením jednotlivých hodnot zatížených systematickou chybou. Navíc se pro výpočet rychlosti šíření zvuku v tyči předpokládá znalost rychlosti šíření ve vzduchu. V našem případě jsme uvažovali rychlost zvuku v prostředí s 50\% vlhkostí vzduchu. I modul pružnosti s velkou chybou odpovídá. Na druhou stranu tato metoda je velmi názorná a lze na ní demonstrovat jednotlivé principy. Metoda uzavřeného rezonátoru je naopak velmi přesná, ale jedná se o uzavřenou trubici řízenou přístroji.
+
+V tabulce \ref{tab:rezonanční-frekvence} je vidět, že odhad základní frekvence vzduchu se přesně shoduje s experimentálně naměřenou hodnotou. To znamená, že je tento odhad správný a že se v trubici nenachází žádný jiný plyn. U oxidu uhličitého je naměřená hodnota lehce vyšší, pravděpodobně protože se v trubici ještě nacházel nějaký vzduch z předchozího měření. Ze stejného důvodu je i výsledná rychlost v oxidu vyšší než je tabulková hodnota. Naopak tabulková rychlost vzduchu při 20 °C je 343 \(m \cdot s^{-1}\), což přesně odpovídá vypočtené hodnotě v rámci její chyby.
+
+Poissonova konstanta také odpovídá tabulkové hodnotě 1,3.
+
+Odhad chyby pro tuto metodu vzhledem k ostatním nejistotám zanedbává nepřesnost čítače frekvence.
+
+V druhém způsobu měření byla měřena pouze rychlost ve vzduchu, protože v případě jiného plynu je trubice izolována a změnou délky by se měnil i tlak daného plynu. Tento výsledek také odpovídá tabulkové hodnotě.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+V tomto měření byla změřena rychlost šíření podélných zvukových vln v mosazné tyči metodou Kundtovy trubice
+\begin{equation}
+    \nonumber
+    c = 3368(217) m \cdot s^{-1}
+\end{equation}
+
+A odtud modul pružnosti v tahu E materiálu tyče
+
+\begin{equation}
+    \nonumber
+    E = 95(13) GPa
+\end{equation}
+
+\newpage
+
+Pomocí uzavřeného rezonátoru byla určena rychlost šíření zvuku ve vzduchu (při konstantní délce trubice a poté konstantní frekvence) a oxidu uhličitém a graficky znázorněn tento průběh
+
+\begin{equation}
+    \nonumber
+    c_{vzduch} = 342(1) \; m \cdot s^{-1}
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    c_{vzduch} = 344(3) \; m \cdot s^{-1}
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    c_{CO_2} = 269(1) \; m \cdot s^{-1}
+\end{equation}
+
+Nakonec byla vypočítána Poissonova konstanta \(\kappa\) oxidu uhličitého z naměřené rychlosti zvuku
+
+\begin{equation}
+    \nonumber
+    \kappa = 1,29(1)
+\end{equation}
