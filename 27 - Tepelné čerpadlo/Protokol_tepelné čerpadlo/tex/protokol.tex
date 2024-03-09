@@ -172,7 +172,7 @@ Na obrázku \ref{fig:teploty-cas-zap} jsou zobrazeny závislosti teplot T1 - T4 
 
 \subsection{Vypnutý kompresor}
 
-Jakmile tepelné čerpadlo dosáhlo požadovaného rozdílu teplot mezi rezervoáry, kompresor byl odpojen od elektrického proudu a byla sledována změna teplot T1 - T4 a tlaků obou částí čerpadla. Na grafu \ref{fig:T1(t),T2(t)-vyp} je průběh závislosti teplot obou rezervoárů na čase, který je .
+Jakmile tepelné čerpadlo dosáhlo požadovaného rozdílu teplot mezi rezervoáry, kompresor byl odpojen od elektrického proudu a byla sledována změna teplot T1 - T4 a tlaků obou částí čerpadla. Na grafu \ref{fig:T1(t),T2(t)-vyp} je průběh závislosti teplot obou rezervoárů na čase, který je fitovaný exponenciálou.
 
 \begin{figure}[h]
     \centering
@@ -180,7 +180,30 @@ Jakmile tepelné čerpadlo dosáhlo požadovaného rozdílu teplot mezi rezervo�
     \caption{Závislost teploty T1 a T2 na čase}
     \label{fig:T1(t),T2(t)-vyp}
 \end{figure}
-    
+
+Exponenciála je daná rovnicí
+
+\begin{equation}
+    \nonumber
+    y = y_0 + A \cdot e^{R_0 \cdot x}
+\end{equation}
+
+Exponenciální křivky modrého a červeného rezervoáru mají následující koeficienty
+
+\begin{equation}
+    \nonumber
+    y_{červená} = 24,9 + 20,7 \cdot e^{-0,01 x}
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    y_{modrá} = 12,8 - 10,6 \cdot e^{-0,01 x}
+\end{equation}
+
+Na grafu je zobrazena závislost tlaků na čase při vypnutém kompresoru.
+
+
+
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
