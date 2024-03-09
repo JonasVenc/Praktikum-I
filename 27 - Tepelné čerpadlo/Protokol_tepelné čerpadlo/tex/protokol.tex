@@ -22,9 +22,50 @@
 Podstatou fungování tepelného čerpadla je předávání tepla z jednoho rezervoáru do druhého. Používají se různá média pro přenos tepla, v našem případě je v rezervoárech umístěna destilovaná voda, kde rezervoár, který se během fungování otepluje je označen červeně a druhý, který se ochlazuje má modrou barvu.
 
 Tepelné čerpadlo je tvořeno uzavřeným okruhem, kde koluje pracovní látka 1,1,1,2-
-tetrafluorethan. V oblasti modrého kolektoru se v měděném potrubí chladivo nachází v plynné fázi. Odtud je přečerpáváno do kompresoru, kde je zvyšován tlak a tím dochází ke zkapalnění. Zde začíná vysokotlaká část čerpadla. Během tohoto procesu látka odevzdává část energie do červeného kolektoru, což způsobuje zvyšování teploty vody uvnitř kolektoru. Odtud putuje chladivo v kapalném stavu přes vysokotlaký manometr do kolektoru. Zde se látka hromadí a je regulovaně propouštěna do expanzního ventilu. Zde je snižován tlak a kapalina se tím vypařuje. Začíná tak nízkotlaká část čerpadla. Tím odebírá teplo z okolí a snižuje teplotu modrého rezervoáru. Je zde také umístěn nízkotlaký barometr. Následuje teplotní čidlo, které reguluje expanzní ventil proto, aby se do kompresoru dostávala pouze plynná fáze. Za čidlem se nachází již kompresor, který takto celý okruh uzavírá, jak je znázorněno na obrázku.
+tetrafluorethan. V oblasti modrého kolektoru se v měděném potrubí chladivo nachází v plynné fázi. Odtud je přečerpáváno do kompresoru, kde je zvyšován tlak a tím dochází ke zkapalnění. Zde začíná vysokotlaká část čerpadla. Během tohoto procesu látka odevzdává část energie do červeného kolektoru, což způsobuje zvyšování teploty vody uvnitř kolektoru. Odtud putuje chladivo v kapalném stavu přes vysokotlaký manometr do kolektoru. Zde se látka hromadí a je regulovaně propouštěna do expanzního ventilu. Zde je snižován tlak a kapalina se tím vypařuje. Začíná tak nízkotlaká část čerpadla. Tím odebírá teplo z okolí a snižuje teplotu modrého rezervoáru. Je zde také umístěn nízkotlaký barometr. Následuje teplotní čidlo, které reguluje expanzní ventil proto, aby se do kompresoru dostávala pouze plynná fáze. Za čidlem se nachází již kompresor, který takto celý okruh uzavírá, jak je znázorněno na obrázku \ref{fig:tepelne-cerpadlo}.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{27 - Tepelné čerpadlo//Protokol_tepelné čerpadlo//img/Schéma tepelného čerpadla.png}
+    \caption{Schéma tepelného čerpadla}
+    \label{fig:tepelne-cerpadlo}
+\end{figure}
 
+\newpage
+
+Teplota v různých místech okruhu je snímána digitálním termometrem s výstupem do počítače. Teplota T1 je měřena v modrém rezervoáru a T2 v červeném. Uvnitř kbelíků jsou umístěna míchadla, díky kterým je teplota vody ve všech místech podobná. Dále je teplota T3 odečítána ze vzduchu v okolí a nakonec teplota T4 na povrchu kompresoru.
+
+U ideálního tepelného čerpadla by platila rovnice zákonu zachování energie
+
+\begin{equation}
+    \Delta Q_1 + W = \Delta Q_2
+\end{equation}
+
+kde \(\Delta Q_1\) je odebrané teplo, \(W\) energie dodaná elektrickým proudem a \(\Delta Q_2\) teplo, které přijme červený rezervoár. Práce, kterou tepelný stroj vykonává, je rovna
+
+\begin{equation}
+    W = P \cdot \Delta t
+\end{equation}
+
+kde P je průměrný výkon za čas t. Dodané, popř. odevzdané teplo lze vyjádřit jako
+
+\begin{equation}
+    \Delta Q_{1,2} = m_{1,2} c \Delta T_{1,2}
+\end{equation}
+
+kde \(m_{1,2}\) je hmotnost vody v rezervoáru, \(c\) měrné teplo vody a \(\Delta T_{1,2}\) rozdíl teplot v daném rezervoáru. V reálném případě však do vztahu (1) vstupují tepelné ztráty \(\Delta Q\).
+
+Abychom mohli určit kvalitu daného tepelného čerpadla a porovnat ho s jinými zavádí se tzv. chladící faktor zdroje chladu, který je definován jako
+
+\begin{equation}
+    \varepsilon (\Delta T) = \frac{\Delta Q_1}{P \Delta t} = \frac{c m_1 \Delta T_1}{P \Delta t}
+\end{equation}
+
+Analogicky můžeme popsat topnou účinnost pomocí topného faktoru zdroje tepla
+
+\begin{equation}
+    \tau (\Delta t) = \frac{c m_2 \Delta T_2}{P \Delta t}
+\end{equation}
 
 % ----------------------------------------------------------------------
 %  Výsledky a zpracování měření
@@ -33,22 +74,24 @@ tetrafluorethan. V oblasti modrého kolektoru se v měděném potrubí chladivo 
 
 \subsection{Laboratorní podmínky}
 
-    Měření bylo prováděno za laboratorních podmínek uvedených v tabulce \ref{tab:lab_pod}. Pro naše měření je ale důležité, aby hodnoty (jako například teplota vody procházející  trubicí) byly co možná nejvíce podobné po celou dobu.
+    Měření bylo prováděno za laboratorních podmínek uvedených v tabulce \ref{tab:laboratorni-podminky}.
 
     \begin{table}[h]
         \centering
-        \caption{Laboratorní podmínky}
-        \label{tab:lab_pod}
         \begin{tabular}{|c|c|c|} 
         \hline
             t / °C & p / hPa & vlhkost / \%RH  \\ 
         \hline
-            22,9(40)   & 977,2(20)   & 34,7(25)            \\
+            23,9(4)   & 981(2)   & 38,8(25)            \\
         \hline
         \end{tabular}
+        \caption{Laboratorní podmínky}
+        \label{tab:laboratorni-podminky}
     \end{table}
 
-\subsection{Podnadpis}
+\subsection{Zapnutý kompresor}
+
+Při zapnutém kompresoru byly v minutovém intervalu zapisovány teploty T1 - T4, tlak v nízkotlaké a vysokotlaké části a příkon dodávaný kompresoru. Závislosti teploty v modrém a červeném rezervoáru na čase jsou znázorněn na obrázku.
 
     
 % ----------------------------------------------------------------------
