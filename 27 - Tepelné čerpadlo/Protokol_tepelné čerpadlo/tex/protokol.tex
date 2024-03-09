@@ -91,7 +91,74 @@ Analogicky můžeme popsat topnou účinnost pomocí topného faktoru zdroje tep
 
 \subsection{Zapnutý kompresor}
 
-Při zapnutém kompresoru byly v minutovém intervalu zapisovány teploty T1 - T4, tlak v nízkotlaké a vysokotlaké části a příkon dodávaný kompresoru. Závislosti teploty v modrém a červeném rezervoáru na čase jsou znázorněn na obrázku.
+Při zapnutém kompresoru byly v minutovém intervalu zapisovány teploty T1 - T4, tlak v nízkotlaké a vysokotlaké části a příkon dodávaný kompresoru. Závislosti teploty v modrém a červeném rezervoáru na čase jsou znázorněn na obrázku \ref{fig:T1(t),T2(t)}. Dále je na obrázku \ref{fig:P(t)} zobrazena závislost obou tlaků na čase. Nakonec na obrázku \ref{fig:P0(t)} je naměřena závislost příkonu na čase.
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.68\linewidth]{27 - Tepelné čerpadlo//Protokol_tepelné čerpadlo//img/T1(t), T2(t) zap.png}
+    \caption{Závislost teploty T1 a T2 na čase}
+    \label{fig:T1(t),T2(t)}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.68\linewidth]{27 - Tepelné čerpadlo//Protokol_tepelné čerpadlo//img/P(t) zap.png}
+    \caption{Závislost tlaků na čase}
+    \label{fig:P(t)}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.68\linewidth]{27 - Tepelné čerpadlo//Protokol_tepelné čerpadlo//img/P0(t).png}
+    \caption{Závislost příkonu na čase}
+    \label{fig:P0(t)}
+\end{figure}
+
+Pro výpočet chladícího faktoru použijeme vztah (4). Pro výpočty budeme používat hodnoty uvedené v tabulce \ref{tab:hodnoty}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|} 
+\hline
+Měrné teplo vody       & 4180 J/kg\cdot K   \\ 
+\hline
+Hustota vody při 24 °C & 997 kg \cdot m^{-3}    \\ 
+\hline
+Hmotnost m_1          & 4 kg      \\ 
+\hline
+Hmotnost m_2          & 4 kg      \\ 
+\hline
+Průměrný příkon        & 130,6 W  \\ 
+\hline
+\Delta T_1                   & 18,1 ^\circ C  \\ 
+\hline
+\Delta T_2                   & 21,9 ^\circ C  \\ 
+\hline
+\Delta t                      & 1380 s   \\
+\hline
+\end{tabular}
+\caption{Použité hodnoty}
+\label{tab:hodnoty}
+\end{table}
+
+Odtud získáme chladící faktor
+
+\begin{equation}
+    \nonumber
+    \varepsilon = 1,67
+\end{equation}
+
+a topný faktor
+
+\begin{equation}
+    \nonumber
+    \tau = 2,03
+\end{equation}
+
 
     
 % ----------------------------------------------------------------------
