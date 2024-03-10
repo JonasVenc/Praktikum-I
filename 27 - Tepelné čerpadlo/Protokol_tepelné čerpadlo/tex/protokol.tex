@@ -67,6 +67,12 @@ Analogicky můžeme popsat topnou účinnost pomocí topného faktoru zdroje tep
     \tau (\Delta t) = \frac{c m_2 \Delta T_2}{P \Delta t}
 \end{equation}
 
+Nejistoty měření jsou dány
+
+\begin{equation}
+    \sigma^2_f = \sum^n_{i=1} (\frac{\partial f}{\partial x_i})^2 \sigma^2_x_i
+\end{equation}
+
 % ----------------------------------------------------------------------
 %  Výsledky a zpracování měření
 % ----------------------------------------------------------------------
@@ -159,9 +165,11 @@ a topný faktor
     \tau = 2,03
 \end{equation}
 
-Na obrázku \ref{fig:teploty-cas-zap} jsou zobrazeny závislosti teplot T1 - T4 na čase. Tento graf je exportovaný přímo z programu používaném pro sběr dat z termometru. Oproti předchozím grafů navíc porovnává teplotu T3 okolí čerpadla a T4 na povrchu kompresoru.
 
-Na grafu \ref{fig:faktor(T)} jsou znázorněny závislotosti topného a chladícího faktoru na \(\Delta\) T
+
+Na grafu \ref{fig:faktor(T)} jsou znázorněny závislosti topného a chladícího faktoru na \(\Delta\) T.
+
+Na obrázku \ref{fig:teploty-cas-zap} jsou zobrazeny závislosti teplot T1 - T4 na čase. Tento graf je exportovaný přímo z programu používaném pro sběr dat z termometru. Oproti předchozím grafů navíc porovnává teplotu T3 okolí čerpadla a T4 na povrchu kompresoru.
 
 \newpage
 
@@ -235,40 +243,73 @@ Podle (2) je práce, kterou čerpadlo vykoná, rovna
 
 \begin{equation}
     \nonumber
-    W = 188,06 \; kJ
+    W = 188(9) \; kJ
 \end{equation}
 
 Podle (3) je odebrané a dodané teplo rovno
 
 \begin{equation}
     \nonumber
-    \Delta Q_1 = 4,87 \; MJ
+    \Delta Q_1 = 4,87(4) \; MJ
 \end{equation}
 
 \begin{equation}
     \nonumber
-    \Delta Q_2 = 4,93 \; MJ
+    \Delta Q_2 = 4,93(4) \; MJ
 \end{equation}
 
 Celkové tepelné ztráty se vypočítají jako
 
 \begin{equation}
+    \nonumber
     \Delta Q = \Delta Q_1 + W - \Delta Q_2
 \end{equation}
 
 Odtud
 
 \begin{equation}
-    \Delta Q = 124,5 \; kJ
+    \nonumber
+    \Delta Q = 125(60) \; kJ
 \end{equation}
 
+Nepřesnost teploměru je 1,09 °C, měřiče příkonu 0,05 W, vysokotlakého manometru 0,1 bar a nízkotlakého je 0,05 bar. Chyba určení hmotnosti rezervoáru je spočtena z jejího objemu a hustoty a je rovna 0,1 kg.
+
+Podle (6) je chyba \(\Delta Q_{1,2}\) rovna
+
+\begin{equation}
+    \sigma_{Q1,2} = c \sqrt{\Delta T^2 \sigma^2_m + m^2 \sigma^2_{\Delta T}}
+\end{equation}
+
+Nepřesnost \(Q\) je také dána metodou přenosu chyb pro součet.
 
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Při zapnutém kompresoru je z grafu \ref{fig:T1(t),T2(t)} patrné, že závislost teploty na čase není lineární. S postupem času je změna teplot v obou rezervoárech menší než za předchozí časový úsek. Znamená to tedy, že tepelný stroj je nejvíce účinný na začátku činnosti. Tuto skutečnost potvrzuje obrázek  \ref{fig:faktor(T)}, kde topný i chladící faktor je nejvyšší ze začátku a poté klesá. Prvních několik minut se tepelný stroj teprve dostává do svého optimálního provozního stavu, proto oba faktory rostou.
+
+Na grafu \ref{fig:P0(t)} závislosti elektrického příkonu na čase vidět, že příkon odebíraný kompresorem ze začátku pravidelně roste, až dosáhne svého maxima přibližně ve 140 W. Po prvních 10 minutách je již stabilizovaný a jeho hodnota až do konce provozu osciluje přibližně mezi 126-130 W.
+
+Obrázek \ref{fig:teploty-cas-zap} srovnává teploty T3 okolí a T4 na povrchu kompresoru. Je vidět, že teplota T3 nepatrně vzrostla, což je způsobeno tepelnými ztrátami do okolí. Výrazněji vzrostla teplota T4 na povrchu kompresoru způsobená energetickými ztrátami při přeměně elektrické energie na práci kompresoru.
+
+Při vypnutém kompresoru bylo třeba sledovat jednotlivé závislosti déle, abychom získali data během pomalého procesu samovolné vychládání čerpadla. Teplotní závislost rezervoáru byla fitována exponenciálou. Z jejího předpisu vidíme, že koeficient \(R_0\) u proměnné \(x\) je téměř nulový, což znamená, že tato křivka je velmi podobná přímce. I přes to, že jsme hodnoty měřili téměř hodinu po minutových intervalech, je pravděpodobné, že exponenciální průběh bychom získali až za delší časový úsek. Samotné tepelné čerpadlo se vrátí do původního stavu až za mnoho hodin. Znaménko koeficientu A udává orientaci exponenciály.
+
+Graf \ref{fig:P(t)-vyp} znázorňuje závislost tlaků v potrubí obou částí čerpadla. Vidíme, že obě hodnoty mají tendenci se vrátit do rovnovážného stavu. Závislost může působit schodovitě, což je dáno způsobem měření a nejmenším dílkem manometru.
+
+Také obrázek \ref{fig:T(t)-vyp} zobrazují tendenci všech teplot vyrovnat teplotu v okolí. U teploty T3 v čase 13:50 se nachází výchylka, která je velmi pravděpodobně způsobena momentálním podnětem z okolí.
+
+Nakonec byly spočteny tepelné ztráty, které jsou přijatelné vzhledem k celkové energii. Znamená to tedy, že takto sestrojené tepelné čerpadlo typu voda-voda je poměrně účinné.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+V tomto měření jsme změřily tepelné čerpadlo během provozu i po něm. Získaly jsme data, popisující práci tohoto stroje, které jsme graficky znázornili v závislosti na čase.
+
+Vyhodnotili jsme i účinnost čerpadla pomocí topného a chladícího faktoru, jenž jsme také graficky znázornili.
+
+Při vypnutém čerpadlu jsme navíc závislost teplot v rezervoárech fitovali exponenciálou a diskutovali její koeficienty.
+
+Na konec jsme spočítali odhad tepelných ztrát čerpadla.
