@@ -158,7 +158,7 @@ Odtud můžeme určit obsah kruhového průřezu drátu
     S = 0,20(1) \; mm^2 = 2(01) \cdot 10^{-7} \; m^2
 \end{equation}
 
-V tabulce níže jsou uvedeny závislosti velikosti zatížení a protažení tyče. Působící síla je spočtena jako síla gravitační \(F = m \cdot g\), kde \(g = 9,81 m \cdot \; s^{-2}\) podle [2]. Hodnota \(n - n_0\) udává rozdíl dílků na stupnici z aktuálního a počátečního zatížení při 1 kg. Změna délky struny je odtud dopočtena podle (6) a (8). První tabulka odpovídá postupnému zatěžování a tabulka druhá zkracování struny.
+V tabulce \ref{tab:zvysovani-hmotnosti} a \ref{tab:snizovani-hmotnosti} níže jsou uvedeny závislosti velikosti zatížení a protažení tyče. Působící síla je spočtena jako síla gravitační \(F = m \cdot g\), kde \(g = 9,81 m \cdot \; s^{-2}\) podle [2]. Hodnota \(n - n_0\) udává rozdíl dílků na stupnici z aktuálního a počátečního zatížení při 1 kg. Změna délky struny je odtud dopočtena podle (6) a (8). První tabulka odpovídá postupnému zatěžování a tabulka druhá zkracování struny.
 
 \begin{table}[h]
 \centering
@@ -182,6 +182,8 @@ Hmotnost závaží / kg & Síla / N & n - n\_0 / cm & Změna délky struny / cm 
 2,8                  & 27,5     & 4,8           & 0,0514(3)                  \\ \hline
 2,9                  & 28,4     & 5             & 0,0535(3)                  \\ \hline
 \end{tabular}
+\caption{Zvyšování hmotnosti závaží}
+\label{tab:zvysovani-hmotnosti}
 \end{table}
 
 \begin{table}[h]
@@ -206,6 +208,8 @@ Hmotnost závaží / kg & Síla / N & n - n\_0 / cm & Změna délky struny / cm 
 1,5                  & 14,7     & 1,3           & 0,0139(1)                  \\ \hline
 1                    & 9,8      & 0             & 0                  \\ \hline
 \end{tabular}
+\caption{Snižování hmotnosti závaží}
+\label{tab:snizovani-hmotnosti}
 \end{table}
 
 \newpage
@@ -235,6 +239,97 @@ kde chyba je určena metodou přenosu chyb
     \caption{Závislost změny délky struny na působící síle}
     \label{fig:delka-struny}
 \end{figure}
+
+Závislost na obrázku \ref{fig:delka-struny} byla lineárně fitována v programu Origin přímkou s předpisem y = ax + b se standardní chybou. Směrnice a je rovna
+
+\begin{equation}
+    \nonumber
+    a = 0,0290(3)
+\end{equation}
+
+Ze vztahu (2) můžeme spočítat modul pružnosti \(E\) ze směrnice
+
+\begin{equation}
+    \nonumber
+    a = \frac{l_0}{ES}
+\end{equation}
+
+a odtud
+
+\begin{equation}
+    \nonumber
+    E = 
+\end{equation}
+
+kde chyba modulu je dána jako
+
+\begin{equation}
+    \sigma_E = E \sqrt{\frac{\sigma^2_l__0}{l^2_0}+\frac{\sigma^2_a}{a^2}+\frac{\sigma^_S}{S^2}}
+\end{equation}
+
+\subsection{Měření modulu E z průhybu trámku}
+
+Tabulka \ref{tab:rozmery-aparatury} níže popisuje naměřené rozměry.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Délka tyče / m         & 0,41(1)    \\ \hline
+Výška ocelové tyče / m & 0,00195(1) \\ \hline
+Šířka ocelové tyče / m & 0,01195(1) \\ \hline
+Výška mosazné tyče / m & 0,00202(1) \\ \hline
+Šířka mosazné tyče / m & 0,01170(1)  \\ \hline
+\end{tabular}
+\caption{Rozměry aparatury}
+\label{tab:rozmery-aparatury}
+\end{table}
+
+V tabulce \ref{tab:ocelova-tyc} jsou uvedeny naměřené závislosti prohnutí na zatížení u ocelové tyče. V levé části je zatěžování a na prvé odlehčování tyče.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Hmotnost / kg & Prohnutí / m & Hmotnost / kg & Prohnutí / mm \\ \hline
+0             & 0,7          & 0,9           & 9,6          \\ \hline
+0,1           & 1,7          & 0,8           & 8,7          \\ \hline
+0,2           & 2,7          & 0,7           & 7,7          \\ \hline
+0,3           & 3,6          & 0,6           & 6,7          \\ \hline
+0,4           & 4,6          & 0,5           & 5,7          \\ \hline
+0,5           & 5,6          & 0,4           & 4,7          \\ \hline
+0,6           & 6,6          & 0,3           & 3,7          \\ \hline
+0,7           & 7,6          & 0,2           & 2,8          \\ \hline
+0,8           & 8,6          & 0,1           & 1,8          \\ \hline
+0,9           & 9,6          & 0             & 0,8          \\ \hline
+\end{tabular}
+\caption{Prohnutí ocelové tyče}
+\label{tab:ocelova-tyc}
+\end{table}
+
+A v tabulce podobně pro mosaznou tyč
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Hmotnost / kg & Prohnutí / m & Hmotnost / kg & Prohnutí / mm \\ \hline
+0             & 0,7          & 0,9           & 9,6          \\ \hline
+0,1           & 1,7          & 0,8           & 8,7          \\ \hline
+0,2           & 2,7          & 0,7           & 7,7          \\ \hline
+0,3           & 3,6          & 0,6           & 6,7          \\ \hline
+0,4           & 4,6          & 0,5           & 5,7          \\ \hline
+0,5           & 5,6          & 0,4           & 4,7          \\ \hline
+0,6           & 6,6          & 0,3           & 3,7          \\ \hline
+0,7           & 7,6          & 0,2           & 2,8          \\ \hline
+0,8           & 8,6          & 0,1           & 1,8          \\ \hline
+0,9           & 9,6          & 0             & 0,8          \\ \hline
+\end{tabular}
+\caption{Prohnutí mosazné tyče}
+\label{tab:mosazna-tyc}
+\end{table}
+
+
 
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
