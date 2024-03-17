@@ -109,6 +109,7 @@ Odvozením z předchozí rovnice pro výpočet modulu pružnosti použijeme
     E = \frac{F l^3}{4 y a b^3}
 \end{equation}
 
+kde \(y\) je velikost pohnutí, \(a\) šířka a \(b\) výška obdélníkového průřezu tyče.
 
 % ----------------------------------------------------------------------
 %  Výsledky a zpracování měření
@@ -224,7 +225,7 @@ Modul pružnosti spočítáme nejprve podle rovnice (5)
 
 \begin{equation}
     \nonumber
-    E = 84(4) GPa
+    E = 207(4) \; GPa
 \end{equation}
 
 kde chyba je určena metodou přenosu chyb
@@ -258,7 +259,7 @@ a odtud
 
 \begin{equation}
     \nonumber
-    E = 
+    E = 200(3) \; GPa
 \end{equation}
 
 kde chyba modulu je dána jako
@@ -266,6 +267,8 @@ kde chyba modulu je dána jako
 \begin{equation}
     \sigma_E = E \sqrt{\frac{\sigma^2_l__0}{l^2_0}+\frac{\sigma^2_a}{a^2}+\frac{\sigma^_S}{S^2}}
 \end{equation}
+
+\newpage
 
 \subsection{Měření modulu E z průhybu trámku}
 
@@ -307,7 +310,7 @@ Hmotnost / kg & Prohnutí / m & Hmotnost / kg & Prohnutí / mm \\ \hline
 \label{tab:ocelova-tyc}
 \end{table}
 
-A v tabulce podobně pro mosaznou tyč
+A v tabulce \ref{tab:mosazna-tyc} podobně pro mosaznou tyč.
 
 \begin{table}[h]
 \centering
@@ -329,14 +332,79 @@ Hmotnost / kg & Prohnutí / m & Hmotnost / kg & Prohnutí / mm \\ \hline
 \label{tab:mosazna-tyc}
 \end{table}
 
+\newpage
 
+Nepřesnost určení prohnutí v objektivovém mikrometru je 0,1 mm.
 
+Níže na obrázcích \ref{fig:prohnuti-oceli} a \ref{fig:prohnuti-mosazi} jsou znázorněny obě závislosti.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{09 - Měření modulu pružnosti v tahu//Protokol_modul pružnosti//img/Prohnutí oceli.png}
+    \caption{Prohnutí oceli}
+    \label{fig:prohnuti-oceli}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{09 - Měření modulu pružnosti v tahu//Protokol_modul pružnosti//img/Prohnutí mosazi.png}
+    \caption{Prohnutí mosazi}
+    \label{fig:prohnuti-mosazi}
+\end{figure}
+
+Opět směrnice přímek lineární regrese jsou
+
+\begin{equation}
+    \nonumber
+    a_{oceli} = 9,87(3)
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    a_{mosazi} = 18,4(07)
+\end{equation}
+
+Modul pružnosti spočítáme podle (10)
+
+\begin{equation}
+\nonumber
+    E_{oceli} = 179(4) \; GPa
+\end{equation}
+
+\begin{equation}
+    \nonumber
+    E_{mosazi} = 75(3) \; GPa
+\end{equation}
+
+Nepřesnost \(E\) je vypočtena podle metody přenosu chyb jako
+
+\begin{equation}
+    \sigma_E = E \sqrt{9\frac{\sigma^2_l}{l^2}+\frac{\sigma^2_y}{y^2}+\frac{\sigma^2_a}{a^2}+9\frac{\sigma^2_b}{b^2}}
+\end{equation}
+
+\newpage
+\;
+\newpage
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Při tomto měření byla použita závaží, u kterých byla ověřena jejich skutečná hmotnost. Byla náhodně vybrána tři závaží k jejich vážení. Hmotnost se téměř úplně shodovala, proto není nikde uvažována nepřesnost závaží.
+
+Při měření modulu \(E\) v první metodě byly chyby nadhodnoceny než by měřidla umožňovala, jak je to popsáno výše. Způsob měření neumožňuje dosáhnout přesnost měřidla a je třeba tedy uvažovat systematickou chybu. I s touto chybou jsou výsledky poměrně přesné a vypovídající.
+
+Způsob, jak ověřit kvalitu měření, je porovnat výsledné hodnoty \(E\) s tabulkovými hodnotami uvedenými v [2]. Modul pružnosti oceli se pohybuje kolem 200 GPa v závislosti na druhu oceli. Výsledek v první i druhé metodě se tedy shoduje s očekávanou tabulkovou hodnotou. Udávaná hodnota mosazi je přibližně 100 GPa. My dostáváme hodnotu o trochu nižší, což může být způsobeno také druhem a složením mosazi. Skutečnost, že mosaz má modul pružnosti nižší, potvrzuje i pozorování, kde docházelo k prohnutí tyče pří nižší zátěži než u oceli.
+
+U všech měření jsme provedli také měření při zpětném průchodu a oba výsledky zaneseny do grafu. To, že tyto hodnoty téměř splývají, nám potvrzuje, že jsme nepřekročili mez pružnosti a tedy, že naše závislosti jsou lineární. Kdybychom tuto mez překročili, již bychom nemohli použít tyto výpočty.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+V tomto měření jsme změřili modul pružnosti \(E\) v tahu z protažení drátu na přibližně E = 200(3) GPa pomocí velikosti protažení a také podle směrnice na grafu.
+
+Dále jsme změřili tento modul oceli a mosazi z průhybu trámku.
+
+Nakonec jsme tyto závislosti graficky znázornili a určili jejich lineární regresi.
