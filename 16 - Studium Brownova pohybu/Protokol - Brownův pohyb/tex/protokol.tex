@@ -1,0 +1,142 @@
+% ----------------------------------------------------------------------
+%  Pracovní úkoly
+% ----------------------------------------------------------------------
+\section{Pracovní úkoly}
+
+\begin{enumerate}
+\item Experimentálně ověřte platnost vztahu pro časovou závislost středního kvadratického posunutí částice \(\overline{s^2}\) při Brownově pohybu.
+
+\item Určete aktivitu Brownova pohybu \(A\) submikronových částic ve vodě za pokojové teploty.
+
+\item Velikost částic odečtěte z fotografie pomocí programu Solarius.
+
+\item Vypočtěte Avogadrovu konstantu \(N_A\).
+
+\end{enumerate}
+
+% ----------------------------------------------------------------------
+%  Teoretická část
+% ----------------------------------------------------------------------
+\section{Teoretická část}
+
+Částice rozptýlené v plynu nebo v kapalině konají neustále náhodný, chaotický pohyb. Tento pohyb se nazývá Brownův pohyb. Je způsoben tepelnými fluktuacemi prostředí.
+
+Pro popis pohybu částice se zavadí střední kvadratické posunutí \(\overline{x^2}\), jak je popsáno v [1], pro kterou platí vztah
+
+\begin{equation}
+    \overline{x^2} = A \cdot t
+\end{equation}
+
+kde \(A\) je aktivita Brownova pohybu a \(t\) čas.
+
+Konstanta \(A\) lze pro kulovou částici vyjádřit jako
+
+\begin{equation}
+    A = \frac{R T}{3 \pi \eta r N_A}
+\end{equation}
+
+kde \(R\) je molární plynová konstanta, \(T\) teplota, \(\eta\) dynamická viskozita, \(r\) poloměr částice a \(N_A\) Avogadrova konstanta.
+
+Pokud se budeme zabývat pohybem v rovině, nikoliv po jedno dimenzionální úsečce, rovnice pro střední kvadratické posunutí tvar
+
+\begin{equation}
+    \overline{s^2} = 2 \cdot A \cdot t
+\end{equation}
+
+Výpočet \(\overline{s^2}\) provádíme pomocí programu Brown, který vypočítá aritmetický průměr kvadrátu vzdáleností posunutí částice za časový interval.
+
+Pokud označíme vzdálenost sousedních bodů jako \(s_t\) a vzdálenost bodů \(i\) a \(i + 2\) jako \(s_{2t}\) a analogicky \(s_{3t}\), poté podle rovnice (1) dostáváme
+
+\begin{equation}
+    \overline{s^2_{t}} \setminus \overline{s^2_{2t}} \setminus \overline{s^2_{3t}} = t \setminus 2t \setminus 3t
+\end{equation}
+
+Tento poměr můžeme později využít pro ověření kvality měření.
+
+Viskozitu vzorku můžeme vyjádřit pomocí relativní viskozity \(\eta_{rel}\) jako
+
+\begin{equation}
+    \eta_{rel} = 1 + 2,5\varphi
+\end{equation}
+
+% ----------------------------------------------------------------------
+%  Výsledky a zpracování měření
+% ----------------------------------------------------------------------
+\section{Výsledky a zpracování měření}
+
+\subsection{Laboratorní podmínky}
+
+    Měření bylo prováděno za laboratorních podmínek uvedených v tabulce \ref{tab:lab_pod}. Pro naše měření je ale důležitá teplota vzorku, která se nemusí přímo shodovat s teplotou vzduchu. Proto při práci s touto teplotou počítáme s větší chybou.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|} 
+        \hline
+            t / °C & p / hPa & vlhkost / \%RH  \\ 
+        \hline
+            23,4(4)   & 968,8(20)   & 31,0(25)            \\
+        \hline
+        \end{tabular}
+        \caption{Laboratorní podmínky}
+        \label{tab:lab_pod}
+    \end{table}
+
+Pro molární plynovou konstantu uvažujeme \(R\) = 8,314 $J$ ${mol}^{-1}$ $K^{-1}$.
+
+\subsection{Časová závislost středního kvadratického posunutí}
+
+Chování částic jsme sledovali pomocí optického mikroskopu, který měl výstup obrazu do počítače. Zde jsme díky programu Brown zaznamenávali jednotlivé polohy částic po časovém intervalu, který byl dán pravidelným zvukový signálem. Program bylo třeba nejprve kalibrovat, jak je popsáno v návodu u mikroskopu a ve studijním textu [1].
+
+Vzorek byl umístěn na podlažní sklo mezi dvě krycí sklíčka a následně přikryt třetím krycím sklíčkem. Pro každou částici bylo třeba zaznamenat alespoň 25 poloh pro vyhodnocení výsledků. Časový interval byl nastaven na \(t\) = 5 s. Občas se stalo, že částice opustila sledovanou plochu, proto zde bylo měření ukončeno, nebo v případě zaznamenaných méně než 25 poloh bylo měřeni provedeno znovu.
+
+Program Brown na konci měření vrátil naměřené hodnoty včetně vypočtených středních kvadratických posunutí. Pro vyhodnocení kvality měření byl použit teoretický vztah vztah (4). Celkově jsme změřili 9 částic a z nich jsme vybrali 6 nejkvalitnějších, jejichž výsledky jsou znázorněny v tabulce.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Číslo & Počet poloh & Poměry posunutí                    & I / s & \sigma_t / s & \overline{s^2} / \mu m^2 & A / \mu m^2 s^{-1} \\ \hline
+3            & 25          & 1 : 1,63(40) : 2,53(59) : 3,50(82) & 5,00(1)              & 0,08                                        & 19,5(29)                                                                  & 1,95(4)                                                                                     \\
+4            & 35          & 1 : 1,97(41) : 2,88(67) : 4,3(10)  & 5,00(1)              & 0,07                                        & 16,6(23)                                                                  & 1,66(3)                                                                                     \\
+5            & 36          & 1 : 2,07(43) : 2,80(67) : 3,72(84) & 5,00(1)              & 0,13                                        & 23,4(31)                                                                  & 2,34(7)                                                                                     \\
+7            & 52          & 1 : 2,24(53) : 3,14(76) : 4,4(11)  & 5,00(1)              & 0,14                                        & 17,9(29)                                                                  & 1,79(6)                                                                                     \\
+8            & 25          & 1 : 2,12(62) : 3,1(10) : 4,1(12)   & 4,99(1)              & 0,13                                        & 17,7(30)                                                                  & 1,77(6)                                                                                     \\
+9            & 59          & 1 : 2,02(49) : 3,28(74) : 4,31(96) & 5,00(1)              & 0,15                                        & 27,7(48)                                                                  & 2,8(1)                                                                                      \\ \hline
+\end{tabular}
+\caption{Měření pohybu sledovaných částic}
+\label{tab:pohyb-castic}
+\end{table}
+
+kde $I$ je interval záznamu, \(\sigma_t\) Směrodatná odchylka jedné časové značky a $A$ je aktivita Brownova pohybu dopočtené z rovnice (3). Chyba aktivity Brownova pohybu je spočtena podle metody přenosu chyb [4] jako
+
+\begin{equation}
+    \sigma_A = A \sqrt{\frac{\sigma^2_{\overline{s^2}}}{\overline{s^2}} + \frac{\sigma^2_t}{t^2}}
+\end{equation}
+
+Vypočtené střední kvadratické posunutí i s jeho chybou jsme získali přímo z programu Brown.
+
+\subsection{Avogadrova konstanta}
+
+
+    
+% ----------------------------------------------------------------------
+%  Diskuse výsledků
+% ----------------------------------------------------------------------			
+\section{Diskuse výsledků}
+
+Intenzita pohybu - teplota a velikost molekuly.
+
+Teplota vzorku - osvětlení.
+
+Kalibrace i na konci měřen pro kontrolu.
+
+Velikost kapky.
+
+Utíkání částice a průběžné doostřování (3D pohyb).
+
+Nekliknutí myši.
+
+% ----------------------------------------------------------------------
+%  Závěr
+% ----------------------------------------------------------------------
+\section{Závěr}
