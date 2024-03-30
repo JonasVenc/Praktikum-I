@@ -59,6 +59,8 @@ Viskozitu vzorku můžeme vyjádřit pomocí relativní viskozity \(\eta_{rel}\)
     \eta_{rel} = 1 + 2,5\varphi
 \end{equation}
 
+kde \(\varphi\) je objemový podíl částic.
+
 % ----------------------------------------------------------------------
 %  Výsledky a zpracování měření
 % ----------------------------------------------------------------------
@@ -119,39 +121,138 @@ Pro ověření lineární závislosti středního kvadratického posunutí na č
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\linewidth]{16 - Brownův pohyb//Protokol - Brownův pohyb//img/Závislost posunutí na čase.png}
+    \includegraphics[width=0.85\linewidth]{16 - Studium Brownova pohybu//Protokol - Brownův pohyb//img/Závislost posunutí na čase.png}
     \caption{Závislost středního kvadratického posunutí na čase}
     \label{fig:posunuti-na-case}
 \end{figure}
 
 \newpage
-\subsection{Avogadrova konstanta}
+\subsection{Poloměr částic}
+Poloměr částic byl měřen pomocí programu Solarius. Do programu byl načten snímek z elektronového mikroskopu s názvem PS\_17.jpg. Pro každou částici byla ručně vyměřena kružnice, jejíž poloměr program vrátil. Snímek obrazovky je přiložen v příloze. V tabulce \ref{tab:polomery-castic} jsou uvedeny průměry všech částic, které byly celým svým objemem v zorném poli mikroskopu.
 
-Avogadrovu konstantu spočítáme podle rovnice (2). Jako teplotu použijeme teplotu vzduchu a započítáme větší nepřesnost, než by dovoloval teploměr. Déle budeme potřebovat dynamickou viskozitu vody. Ta byla stanovena podle tabulek při naší teplotě na hodnotu
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+436 & 426 & 410 & 420 & 418 \\ \hline
+427 & 473 & 443 & 436 & 421 \\ \hline
+430 & 434 & 426 & 448 & 439 \\ \hline
+421 & 443 & 432 & 440 & 427 \\ \hline
+\end{tabular}
+\caption{Průměry částic / nm}
+\label{tab:polomery-castic}
+\end{table}
+
+Nejistota typu B poloměru byla odhadnuta na 1 nm. Průměr výsledné částice byl vypočten jako aritmetický průměr ze všech výše uvedených průměrů. Tato hodnota byla poté vydělena 2, abychom dostali poloměr částice
 
 \begin{equation}
     \nonumber
-    \eta = 1 \cdot 10^{-3} \; Pa \cdot s
+    r = 216(14) \; nm
 \end{equation}
-    
+
+kde nejistota typu A byla spočtena jako výběrová směrodatná odchylka. Poté byla sečtena pod kvadrátem s nejistotou typu B.
+
+\subsection{Avogadrova konstanta}
+
+Avogadrovu konstantu spočítáme podle rovnice (2). Jako teplotu použijeme teplotu vzduchu a započítáme větší nepřesnost, než by dovoloval teploměr. Déle budeme potřebovat dynamickou viskozitu vody. Ta byla stanovena podle tabulek [5] při naší teplotě na hodnotu
+
+\begin{equation}
+    \nonumber
+    \eta_0 = 1 \cdot 10^{-3} \; Pa \cdot s
+\end{equation}
+
+V dokumentech u mikroskopu byla udána hodnota objemového podílu částic jako
+
+\begin{equation}
+    \nonumber
+    \varphi = 4,7 \cdot 10^{-4}
+\end{equation}
+
+Z rovnice (5) můžeme vyjádřit dynamickou viskozitu naší suspenze jako
+
+\begin{equation}
+    \eta = \eta_0 (1 + 2,5 \varphi)
+\end{equation}
+
+kde \(\eta_0\) je viskozita čisté kapaliny.
+
+Odtud dostáváme výsledek
+
+\begin{equation}
+    \nonumber
+    \eta = 1 \cdot 10^{-3}
+\end{equation}
+
+Nyní již můžeme spočítat Avogadrovu konstantu pro jednotlivé měření v tabulce \ref{tab:avogadrova-konstanta}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Číslo měření & Avogadrova konstanta / 10^{23} \; mol^{-1} \\ \hline
+3            & 6,2(4)                   \\
+4            & 7,3(5)                                            \\
+5            & 5,2(4)                                            \\
+7            & 6,8(5)                                            \\
+8            & 6,8(5)                                            \\
+9            & 4,4(3)                                            \\ \hline
+\end{tabular}
+\caption{Avogadrova konstanta}
+\label{tab:avogadrova-konstanta}
+\end{table}
+
+kde nejistota byla spočtena pomocí metody přenosu chyb jako
+
+\begin{equation}
+    \sigma_{N_A} = N_A \sqrt{\frac{\sigma^2_t}{t^2}+\frac{\sigma^2_r}{r^2}+\frac{\sigma^2_A}{A^2}}
+\end{equation}
+
+Hodnota \(\sigma_t\) byla odhadnuta na 2 $K$.
+
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
-Intenzita pohybu - teplota a velikost molekuly.
+Zkoumané částice se od sebe lišily velikostí, což způsobuje nepřesnost. Pro určení přesného poloměru částic různých velikostí by bylo třeba většího počtu než 25. Také záleží u jak velké částice budeme sledovat a zaznamenávat pohyb na tom, s jakou rychlostí se pohybuje. Tato intenzita pohybu je také dána teplotou samotné částice. Pro výpočet jsou použili teplotu vzduchu, ale lze očekávat, že se teplota vzorku bude zvyšovat kvůli intenzivnímu osvětlení. Proto jsme počítali s vyšší nejistotou.
 
-Teplota vzorku - osvětlení.
+Aparaturu jsme kalibrovali na začátku, ale i na konci měření, abychom ověřili, že zůstala zachována po celou dobu. V našem případě se konečná kalibrace shodovala s původní.
 
-Kalibrace i na konci měřen pro kontrolu.
+Pří přípravě vzorku bylo náročné připravit pouze malé množství suspenze. Často se stávalo, že kvůli tvaru kapátka vyteklo příliš velké množství tekutiny, která se poté dostala pod okrajová krycí sklíčka, což by mohlo způsobovat fluktuace. Proto bylo třeba skla vyčistit a přípravu opakovat.
 
-Velikost kapky.
+Během zaznamenávaní pohybu se občas sledované částice dostala mimo zorné pole mikroskopu, proto bylo nutné měření ukončit. Drobným zkreslením měření mohlo být průběžné doostřování částice. Částice koná tří dimenzionální pohyb a my sledujeme pouze dvě dimenze, proto bylo třeba přeostřovat, abychom neztratili vizuální kontakt. Takové zaostřeni u našeho mikroskopu způsobovalo drobné pohyby pozorované plochy a tedy zkresleni trajektorie.
 
-Utíkání částice a průběžné doostřování (3D pohyb).
+Několikrát bylo měření nutné opakovat, protože při stisknutí myši nereagovala a tím se nezaznamenala aktuální poloha v časovém intervalu.
 
-Nekliknutí myši.
+I přes to při porovnání výsledné Avogadrovy konstanty s její tabulkovou hodnotou \(N_A\) = 6,022 \cdot $10^{23}$ nám vyšly poměrně přesné výsledky. Navíc závislost středního kvadratického posunutí na čase má lineární charakter, což potvrzuje teorii. Naměřené poměry středního kvadratického posunutí v závislosti na čase potvrzují teoretickou závislost.
+
+V tomto protokolu je vyhodnoceno více měření, lze je tedy mezi sebou porovnávat.
 
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+Číselně je zde uvedeno měření 8, které je na základě poměrů posunutí nejkvalitnější. Zpráva tohoto měření je přližena v příloze.
+
+V tomto měření jsme experimentálně ověřili časovou závislost středního kvadratického posunutí částice při Brownově pohybu a tuto závislost graficky znázornili. Poměry středního kvadratického posunutí na čase jsou 1 : 1,63(40) : 2,53(59) : 3,50(82).
+
+Dále jsme určili aktivitu Brownova pohybu jednotlivých částic při naší teplotě
+
+\begin{equation}
+    \nonumber
+    A = 1,77(6) \; \mu m^2 s^{-1}
+\end{equation}
+
+Poloměr částic byl stanoven jako
+
+\begin{equation}
+    \nonumber
+    r = 216(14) \; nm
+\end{equation}
+
+Nakonec byla spočtena Avogadrova konstanta
+
+\begin{equation}
+    \nonumber
+    N_A = 6,8(5) \cdot 10^{23} \; mol^{-1}
+\end{equation}
