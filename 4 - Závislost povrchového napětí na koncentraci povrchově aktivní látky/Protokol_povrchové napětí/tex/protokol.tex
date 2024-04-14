@@ -46,10 +46,16 @@ Síla \(P_0\) odpovídá síle \(2F\) a proto dostáváme vztah pro povrchové n
     \sigma = \frac{(m_1 - m_2)\cdot g}{2l}
 \end{equation}
 
+a tedy
+
+\begin{equation}
+    \sigma = \frac{P_0}{2l}
+\end{equation}
+
 Pro přesnější určení povrchového napětí s korekcí tloušťky drátu použijeme
 
 \begin{equation}
-    \sigma = \frac{P_2 - P_1}{2l}-r\Bigg(\sqrt{\frac{(P_2 - P_1)\rho g}{l}}-\frac{P_2 - P_1}{l^2} \Bigg)
+    \sigma_k = \frac{P_2 - P_1}{2l}-r\Bigg(\sqrt{\frac{(P_2 - P_1)\rho g}{l}}-\frac{P_2 - P_1}{l^2} \Bigg)
 \end{equation}
 
 kde \(\rho\) je hustota drátu a \(r\) je poloměr drátu.
@@ -76,9 +82,82 @@ kde \(\rho\) je hustota drátu a \(r\) je poloměr drátu.
         \label{tab:lab_pod}
     \end{table}
 
-\subsection{Podnadpis}
+\subsection{Měření povrchového napětí}
 
-    
+Na začátku bylo třeba důkladně vyčistit lihem a destilovanou vodou část aparatury, abychom zamezily ovlivněni výsledků nečistotami. Dále jsme změřili základní rozměry. Průměr drátu $d$ v rámečku byl změřen třikrát na různých místech se stejnou hodnotou, není tedy třeba počítat aritmetický průměr a směrodatné odchylky. Šířka rámečku $l$ byla spočtena jako aritmetický průměr ze dvou naměřených hodnot se směrodatnou odchylkou uvedených v tabulce \ref{tab:zakladni-rozmery}. Uvedená chyba je rovna součtu druhých mocnin pod odmocninou chyby měřidla a směrodatné odchylky. Vzdálenost $d$ byla měřena mikrometrem s chybou 0,01 mm a délka $l$ posuvným měřidlem s chybou 0,05 mm.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|ccc|cc|}
+\hline
+d / mm & 0,79 & 0,79  & 0,79 & 0,79  & \pm 0,010     \\ \hline
+l / cm & 2,1  & 2,075 &      & 2,085 & \pm 0,014 \\ \hline
+\end{tabular}
+\caption{Tabulka základních rozměrů}
+\label{tab:zakladni-rozmery}
+\end{table}
+
+Roztok v poměru 1:1 jsme vytvořili smícháním jednoho dílu vody a lihu. Přidáním jednoho dílu tohoto roztoku k jednomu dílu destilované vody jsme získali poměr 2:1, dále potom 4:1 atd. Zvolili jsme přidávání vody, protože po změření čisté vody, lihu a poměru 1:1 se vetší rozptyl hodnot nacházel mezi 0\% a 50\% lihu v destilované vodě, proto dává smysl zabývat se tímto intervalem. U každého připraveného vzorku byla zvážena hmotnost pyknometrem, tedy při stejném objemu. Dále byla změřena teplota, protože se jedné o exotermickou reakci během přípravy. Tato teplota byla ve vodní lázni ochlazena na teplotu okolí.
+
+Chyba byla odhadnuta pomocí metody přenosu chyb jako
+
+\begin{equation}
+    \sigma_{\sigma} = \frac{1}{2}\sqrt{\frac{l^2 \sigma^2_{P_0}+P^2_0 \sigma^2_l}{l^4}}
+\end{equation}
+
+Chyba $\sigma_{m_0} = 3 $ mg, odtud $\sigma_{P_0} = 9,81 \cdot \sigma_{m_0}$. Povrchové napětí $\sigma_k$ je spočtena podle (5). Pro tento výpočet byly použity hustotu změřené pro každý vzorek, uvedených v tabulce \ref{tab:hustoty}. Chyba $\sigma_{\sigma_k}$ byla spočtena jako stejná relativní chyba napětí bez korekce průměru drátu.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|cccccccc|}
+\hline
+\multicolumn{1}{|c|}{Poměr destil. voda : líh} &
+  \multicolumn{1}{c|}{P_0 / N} &
+  \multicolumn{1}{c|}{\sigma / 10^{-3} N \cdot m^{-1}} &
+  \multicolumn{1}{c|}{\overline{\sigma}} &
+  \multicolumn{1}{c|}{\sigma_{\sigma} / 10^{-3} N \cdot m^{-1}} &
+  \multicolumn{1}{c|}{{\sigma_k / N \cdot m^{-1}}} &
+  \multicolumn{1}{c|}{\overline{\sigma_k} / 10^{-3} N \cdot m^{-1}} &
+  \sigma_{\sigma_k} \\ \hline
+1:0  & 0,0032 & 80,93 & 83,22 & 0,89 & 0,065 & 67,32 & 0,74 \\
+     & 0,0034 & 84,86 &       & 0,90 & 0,069 &       & 0,72 \\
+     & 0,0034 & 83,88 &       & 0,90 & 0,068 &       & 0,72 \\ \hline
+0:1  & 0,0014 & 33,84 & 34,17 & 0,75 & 0,025 & 25,10 & 0,56 \\
+     & 0,0014 & 34,09 &       & 0,75 & 0,025 &       & 0,55 \\
+     & 0,0014 & 34,58 &       & 0,75 & 0,025 &       & 0,55 \\ \hline
+1:1  & 0,0016 & 39,73 & 41,53 & 0,76 & 0,029 & 30,82 & 0,59 \\
+     & 0,0017 & 42,67 &       & 0,77 & 0,032 &       & 0,56 \\
+     & 0,0017 & 42,18 &       & 0,77 & 0,031 &       & 0,56 \\ \hline
+3:1  & 0,0022 & 54,69 & 54,36 & 0,80 & 0,042 & 41,77 & 0,61 \\
+     & 0,0022 & 54,94 &       & 0,80 & 0,042 &       & 0,61 \\
+     & 0,0021 & 53,46 &       & 0,80 & 0,041 &       & 0,62 \\ \hline
+7:1  & 0,0027 & 67,93 & 67,28 & 0,84 & 0,054 & 53,09 & 0,66 \\
+     & 0,0026 & 66,22 &       & 0,84 & 0,052 &       & 0,67 \\
+     & 0,0027 & 67,69 &       & 0,84 & 0,053 &       & 0,66 \\ \hline
+15:1 & 0,0031 & 76,27 & 76,19 & 0,87 & 0,061 & 61,06 & 0,70 \\
+     & 0,0030 & 75,78 &       & 0,87 & 0,061 &       & 0,70 \\
+     & 0,0031 & 76,52 &       & 0,87 & 0,061 &       & 0,70 \\ \hline
+\end{tabular}
+\caption{Povrchové napětí}
+\label{tab:povrchove-napeti}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Poměr destil. voda : líh & Objem / ml & Hmotnost / g & Hustota / kg \cdot m^3 \\ \hline
+1:0                      & 25         & 24,7         & 988                    \\ \hline
+0:1                      & 25         & 19,84        & 793,6                  \\ \hline
+1:1                      & 25         & 22,73        & 909,2                  \\ \hline
+3:1                      & 25         & 23,91        & 956,4                  \\ \hline
+7:1                      & 25         & 24,41        & 976,4                  \\ \hline
+15:1                     & 25         & 24,45        & 978                    \\ \hline
+\end{tabular}
+\caption{Hustota různých vzorků}
+\label{tab:hustoty}
+\end{table}
+
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
