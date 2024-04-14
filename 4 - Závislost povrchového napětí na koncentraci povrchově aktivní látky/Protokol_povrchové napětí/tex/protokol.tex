@@ -105,7 +105,7 @@ Chyba byla odhadnuta pomocí metody přenosu chyb jako
     \sigma_{\sigma} = \frac{1}{2}\sqrt{\frac{l^2 \sigma^2_{P_0}+P^2_0 \sigma^2_l}{l^4}}
 \end{equation}
 
-Chyba $\sigma_{m_0} = 3 $ mg, odtud $\sigma_{P_0} = 9,81 \cdot \sigma_{m_0}$. Povrchové napětí $\sigma_k$ je spočtena podle (5). Pro tento výpočet byly použity hustotu změřené pro každý vzorek, uvedených v tabulce \ref{tab:hustoty}. Chyba $\sigma_{\sigma_k}$ byla spočtena jako stejná relativní chyba napětí bez korekce průměru drátu.
+Chyba $\sigma_{m_0} = 3 $ mg, odtud $\sigma_{P_0} = 9,81 \cdot \sigma_{m_0}$. Povrchové napětí $\sigma_k$ je spočtena podle (5). Pro tento výpočet byly použity hustotu změřené pro každý vzorek, uvedených v tabulce \ref{tab:hustoty}. Chyba $\sigma_{\sigma_k}$ byla spočtena jako stejná relativní chyba napětí bez korekce průměru drátu. Za konstantu $g = 9,81 \; m \cdot s^{-2}$ je dosazeno podle [4]. Informativně jsou v tabulce \ref{tab:teplota-smichani} uvedeny teploty, ze kterých bylo vzorek třeba ochladit, po smíchání obou látek. Graf \ref{fig:zavislost-napeti} zobrazuje závislost povrchového napětí na koncentraci lihu ve vodě s korekcí a bez. Dále jsou tyto závislosti nafitovány exponenciální křivkou, jejichž parametry jsou zde také uvedeny.
 
 \begin{table}[h]
 \centering
@@ -158,12 +158,46 @@ Poměr destil. voda : líh & Objem / ml & Hmotnost / g & Hustota / kg \cdot m^3 
 \label{tab:hustoty}
 \end{table}
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Poměr destil. voda : líh & Teplota / °C \\ \hline
+1:0                      & 23,4         \\ \hline
+0:1                      & 23,5         \\ \hline
+1:1                      & 29           \\ \hline
+3:1                      & 26,8         \\ \hline
+7:1                      & 24,6         \\ \hline
+15:1                     & 23,6         \\ \hline
+\end{tabular}
+\caption{Teplota vzorku po smíchání}
+\label{tab:teplota-smichani}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{4 - Závislost povrchového napětí na koncentraci povrchově aktivní látky//Protokol_povrchové napětí//img/Závislost povrchového napětí na koncentraci.png}
+    \caption{Závislost povrchového napětí na koncentraci látky}
+    \label{fig:zavislost-napeti}
+\end{figure}
+
+\newpage
+
+Nakonec jsme změřili jakou silou je rámeček nadnášen v klidu. Jedná se zejména o vztlakovou sílu. Změřili jsme zatížení samotného rámečku a poté ponořeného v kapalině. Rozdílem těchto hodnot získáváme pro vodu $m_v = 21 \; mg$ a pro líh $m_l = 18 \; mg$. Tyto hodnoty uvažujeme jako nepřesnost měření.
+
+\newpage
+
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Naše získané hodnoty můžeme porovnat s tabelovanými hodnotami podle [4]. Pro destilovanou vodu platí $\sigma = 73 \cdot 10^{-3} N \cdot m ^{-1}$ a pro ethanol $\sigma = 22 \cdot 10^{-3} N \cdot m^{-1}$ při 20 °C. Tyto hodnoty s naměřenými hodnotami $\sigma = 67 \cdot 10^{-3} N \cdot m ^{-1}$ a $\sigma = 25 \cdot 10^{-3} N \cdot m^{-1}$ nepatrně liší, což může být způsobeno tím, že tabelované hodnoty platí pro teplotu 20 °C a my jsme měřili při teplotě 24 °C. Teplota má na výsledek měření silný vliv. Chyba se mohla projevit nepřesným odhadem, kdy se trámeček nachází těsně pod hladinou. Také jsme ověřili, že nepřesnost měření ovlivňuje také vztlaková síla rámečku. Důvodem může být i nepřesně namíchaná koncentrace. Příprava vzorku tímto způsobem by měla poměrně přesně odpovídat, ale líh je těkavá látka a je tedy možné, že se koncentrace mohla samovolně snižovat. Nakonec tuto hodnotu může ovlivnit i nedokonalé vyčištění aparatury.
+
+Naměřené hodnoty jsou tedy poměrně přesné s uvážením, kolika nepřesnostmi je měření zatíženo.
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+V této práci jsme změřili závislost povrchového napětí $\sigma$ na objemové koncentraci $c$ roztoku etylalkoholu ve vodě odtrhávací metodou. Tuto závislost jsme graficky znázornili na grafu. Zobrazili jsme závislost s korekcí průměru drátu i bez. Výsledná závislost má exponenciální charakter.
