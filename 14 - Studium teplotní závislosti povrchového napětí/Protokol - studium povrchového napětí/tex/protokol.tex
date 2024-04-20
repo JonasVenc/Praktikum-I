@@ -15,7 +15,7 @@
 % ----------------------------------------------------------------------
 \section{Teoretická část}
 
-Na obrázku \ref{fig:aparatura-povrchove-napeti} je znázorněna aparatura pro měření závislosti povrchového napětí na teplotě.
+Na obrázku \ref{fig:aparatura-povrchove-napeti} je znázorněna aparatura pro měření závislosti povrchového napětí na teplotě podle [1].
 
 \begin{figure}[h]
     \centering
@@ -23,6 +23,38 @@ Na obrázku \ref{fig:aparatura-povrchove-napeti} je znázorněna aparatura pro m
     \caption{Aparatura pro měření povrchového napětí}
     \label{fig:aparatura-povrchove-napeti}
 \end{figure}
+
+Měřená kapalina se nachází v nádobce N. Do této nádoby je zavedena kapilára K, která je spojena s vnějším prostorem. Je ponořena těsně pod hladinu a my tak můžeme zanedbat hydrostatický tlak kapaliny působící na konec této trubice. V aspirátoru A je umístěna voda jejíž odtok lze regulovat přítlačnou svorkou PS. Prostor nad kapalinou je propojen se uzavřenou nádobou N a mikromanometrem M, který umožňuje měřit rozdíl tlaku. Aspirátor funguje na principu vodní vývěvy a tím snižuje tlak oproti tlaku ve vnějším prostoru. Díky tomuto rozdílu tlaků se u kapiláry začne vytvářet bublinka, až se nakonec oddělí a zvýší zpět tlak v prostoru nad hladinou.
+
+Na vytlačovaná vzduch z kapiláry tedy působí hydrostatický tlak, který můžeme zanedbat a povrchové napětí napětí kapaliny $\sigma$. Uvnitř kulové plochy o poloměru $r$ se vytváří kapilární přetlak $\Delta p_\sigma$
+
+\begin{equation}
+    \Delta p_\sigma = \frac{2\sigma}{r}
+\end{equation}
+
+Tento přetlak je největší ve chvíli, kdy je poloměr $r$ bubliny nejmenší, tedy shodný s poloměrem kapiláry.
+
+Pro určení tlakového rozdílu použijeme vztah
+
+\begin{equation}
+    \Delta p = d \rho g \sin{\alpha}
+\end{equation}
+
+kde $d$ je výška vodního sloupce v mikromanometru, $g$ tíhové zrychlení, $\rho$ je hustota kapaliny v mikromanometru a $\sin{\alpha}$ úhel sklonu mimkomanometrické trubice.
+
+V našem případě je skol trubice 30° a můžeme tedy dosadit
+
+\begin{equation}
+    \sin{30^{\circ}} = \frac{1}{2}
+\end{equation}
+
+Uvažujeme maximální povrchové napětí a společně s (1) dostáváme
+
+\begin{equation}
+    \sigma = \frac{1}{4} d_{max} \rho g r
+\end{equation}
+
+kde $d_{max}$ je maximální výška hladiny v mikromanometru a $r$ poloměr trubice.
 
 % ----------------------------------------------------------------------
 %  Výsledky a zpracování měření
@@ -46,9 +78,89 @@ Na obrázku \ref{fig:aparatura-povrchove-napeti} je znázorněna aparatura pro m
         \label{tab:lab_pod}
     \end{table}
 
-\subsection{Podnadpis}
+\subsection{Měření povrchového napětí}
 
-    
+Do nádoby N je vložen teploměr pomocí kterého budeme odečítat teploty měřené kapaliny. Uvažujeme tedy maximální kapilární přetlak, proto odečítáme maximální výšku $d$ v mikromanometru za dané teploty. Na začátku, kdy má měřená destilovaná voda laboratorní teplotu, změříme povrchové napětí třikrát pro určení nejistoty typu A. Tato měření jsou znázorněna a vyhodnocena v tabulce \ref{tab:nejistota-A}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|cc|}
+\hline
+Číslo měření        & \multicolumn{1}{c|}{d / mm} & \sigma / 10^{-3} N/m \\ \hline
+1                   & \multicolumn{1}{c|}{109}    & 69,31              \\ \hline
+2                   & \multicolumn{1}{c|}{108}    & 68,68              \\ \hline
+3                   & \multicolumn{1}{c|}{109}    & 69,31              \\ \hline
+Aritmetický průměr  &                             & 69,10              \\ \hline
+Směrodatná odchylka &                             & 0,04               \\ \hline
+\end{tabular}
+\caption{Měření nejistoty typu A}
+\label{tab:nejistota-A}
+\end{table}
+
+kde směrodatná odchylka je rovna nejistotě typu A, kterou označíme $\psi_A$.
+
+Poté jsme zapnuli zahřívání a průběžně zaznamenávali výšku $d$ při stoupající teplotě. Rovnoměrné zahřívání zajišťovalo magnetické míchátko. V tabulce \ref{tab:napeti-na-teplote} jsou zaznamenaná jednotlivá měření.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Teplota /  °C & d / mm & \sigma / 10^{-3} N/m & \psi_{\sigma} / 10^{-3} N/m & \psi / 10^{-3} N/m \\ \hline
+24            & 109    & 69,31            & 2,74        & 2,74 \\ \hline
+25            & 106    & 67,40            & 2,67        & 2,67 \\ \hline
+27            & 105    & 66,77            & 2,65        & 2,65 \\ \hline
+30            & 103    & 65,50            & 2,60        & 2,60 \\ \hline
+33            & 101    & 64,23            & 2,55        & 2,55 \\ \hline
+37            & 100    & 63,59            & 2,53        & 2,53 \\ \hline
+40            & 99     & 62,95            & 2,50        & 2,50 \\ \hline
+45            & 98     & 62,32            & 2,48        & 2,48 \\ \hline
+48            & 97     & 61,68            & 2,46        & 2,46 \\ \hline
+50,5          & 96     & 61,05            & 2,43        & 2,43 \\ \hline
+55            & 95     & 60,41            & 2,41        & 2,41 \\ \hline
+58            & 94     & 59,77            & 2,39        & 2,39 \\ \hline
+60,5          & 94     & 59,77            & 2,39        & 2,39 \\ \hline
+65            & 93     & 59,14            & 2,36        & 2,36 \\ \hline
+68            & 92     & 58,50            & 2,34        & 2,34 \\ \hline
+70            & 92     & 58,50            & 2,34        & 2,34 \\ \hline
+\end{tabular}
+\caption{Měření závislosti povrchového napětí na teplotě}
+\label{tab:napeti-na-teplote}
+\end{table}
+
+kde $\psi_{\sigma}$ je nejistota typu B jednotlivých měření. Je určena pomocí zákonu přenosu chyb
+
+\begin{equation}
+    \sigma^2 = \sum_{i=1}^{N} \left( \frac{\partial f}{\partial x_i} \right)^2 \sigma^2_{x_i}
+\end{equation}
+
+\newpage
+
+odtud dostáváme
+
+\begin{equation}
+    \psi_{\sigma} = \sigma \sqrt{\left( \frac{\psi_d}{d} \right)^2 + \left( \frac{\psi_r}{r} \right)^2}
+\end{equation}
+
+kde $\psi_d$ je chyba výšky vodního sloupce a $\psi_r$ je chyba poloměru kapiláry. Chyba $\psi_r$ je zadána ve studijním textu jako $\psi_r$ = 0,01 mm a chyba $\psi_d$ byla určena jako jeden dílek na stupnici, tedy $\psi_d$ = 1 mm. Tato hodnota byla odhadnuta jako polovina nejmenšího dílku a navíc nadhodnocena, protože trubice je nakloněna a meniskus kapaliny také může ztížit čitelnost.
+
+Pro přehlednost můžeme dosadit a nejistotu $\psi_\sigma$ vyjádřit jako
+
+\begin{equation}
+    \psi_\sigma = \sigma \sqrt{\frac{1}{d^2} + \left( \frac{0,01}{0,26} \right)^2}
+\end{equation}
+
+kde za $d$ dosazujeme v milimetrech.
+
+Celková nejistota $\psi$ je spočtena jako
+
+\begin{equation}
+    \psi = \sqrt{\psi^2_A + \psi^2_{\sigma}}
+\end{equation}
+
+Tuto závislost můžeme zanést do grafu
+
+
+
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
