@@ -127,7 +127,11 @@ Teplota /  °C & d / mm & \sigma / 10^{-3} N/m & \psi_{\sigma} / 10^{-3} N/m & \
 \label{tab:napeti-na-teplote}
 \end{table}
 
-kde $\psi_{\sigma}$ je nejistota typu B jednotlivých měření. Je určena pomocí zákonu přenosu chyb
+kde $\sigma$ je spočtena podle (4). Jako hodnota $g$ bylo uvažováno $g = 9,81 \; m \cdot s^{-2}$ podle [3]. \newline Hustota $\rho = 997,249 \; kg / m^3$ při laboratorní teplotě $24,2 \; ^\circ C$.
+
+Chyba teploty $\psi_T$ je odhadnuta jako polovina nejmenšího dílku, tedy $\psi_T = 0,5 \; ^\circ C$.
+
+$\psi_{\sigma}$ je nejistota typu B jednotlivých měření. Je určena pomocí zákonu přenosu chyb
 
 \begin{equation}
     \sigma^2 = \sum_{i=1}^{N} \left( \frac{\partial f}{\partial x_i} \right)^2 \sigma^2_{x_i}
@@ -157,7 +161,24 @@ Celková nejistota $\psi$ je spočtena jako
     \psi = \sqrt{\psi^2_A + \psi^2_{\sigma}}
 \end{equation}
 
-Tuto závislost můžeme zanést do grafu
+Tuto závislost můžeme zanést do grafu \ref{fig:napeti-na-teplote}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{14 - Studium teplotní závislosti povrchového napětí/Závislost povrchového napětí na teplotě.png}
+    \caption{Závislost povrchového napětí na teplotě}
+    \label{fig:napeti-na-teplote}
+\end{figure}
+
+\newpage
+
+Do grafu jsou zaneseny hodnoty povrchového napětí v závislosti na teplotě se svými chybovými úsečkami. Pro srovnání je zde zobrazena také závislost tabulovaných hodnot. Naměřená závislost byla dále fitována polynomiální funkcí se stupněm 2, tedy kvadratickou závislostí. Její předpis je $y = a + bx + cx^2$ s parametry
+
+\begin{align*}
+    a &= (78,3 \pm 1,3) N \cdot m^{-1}\\
+    b &= (-0,5 \pm 0,1) N \cdot m^{-1} \cdot ^\circ C\\
+    c &= (0,003 \pm 0,001) \cdot m^{-1} \cdot ^\circ C^2
+\end{align*}
 
 
 
@@ -166,7 +187,27 @@ Tuto závislost můžeme zanést do grafu
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Naše změřená závislost se ani v rámci chyby neshoduje s tabulkovými hodnotami, jak je vidět na grafu \ref{fig:napeti-na-teplote}. Při stejné teplotě se změřená teplota liší přibližně o $7 \cdot 10^{-3} N / m^{-1}$ oproti vyšší tabulkové hodnotě.
+
+Důvodem odlišnosti výsledků může být zanedbaný hydrostatický tlak, přestože kapilára byla umístěna přibližně v 1 mm pod hladinou. Dále zde vstupuje nejistota určení teploty měřené kapaliny. Magnetické míchátko sice pracovalo v ohřívané kapalině, ale uvnitř baňky s měřenou kapalinou mohly vznikat oblasti s různými teplotami. Teploměr byl umístě v jedné poloze po celou dobu měření, proto měřil jen jedno místo. V kombinaci s nejistotou vlastního teploměru $\psi_T$ se zde může tato chyba projevit. Vlivem zpoždění zobrazení teploty na teploměru lze předpokládat, že skutečná teplota kapaliny je vyšší.
+
+Posunutí celé závislosti by se dalo vysvětlit nepřesností určení poloměru bubliny, tedy poloměru kapiláry. Dalším sporným faktorem je určení momentu pro odečtení hodnoty změny tlaku. Záleží na rychlosti odtékání kapaliny z aspirátoru. To může ovlivnit neshodu mezi maximálním tlakem a minimálním poloměrem bubliny. Navíc toto odtékání kapalinu probíhá neustále i během měření jednotlivých hodnot.
+
+Otázkou je také čistota měřené kapaliny, kterou jsme nijak neověřovali.
+
+Při vyšších teplotách kapalina může ovlivnit parametry při povrchu kapaliny, například tlak v důsledku vypařování vody.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+V tomto úkolu jsme změřili teplotní závislost povrchového napětí destilované vody $\sigma$ v rozsahu teplot od 23°C do 70°C metodou bublin. Měřenou závislost jsme znázornili graficky, do grafu vynesli chybové úsečky a tabulkové hodnoty. Závislost jsme aproximovali kvadratickou funkcí s parametry
+
+\begin{align*}
+    a &= (78,3 \pm 1,3) N \cdot m^{-1}\\
+    b &= (-0,5 \pm 0,1) N \cdot m^{-1} \cdot ^\circ C\\
+    c &= (0,003 \pm 0,001) \cdot m^{-1} \cdot ^\circ C^2
+\end{align*}
+
+Pro eliminaci rozdílu naměřené závislosti s tabulkovou bychom mohli požít různé poloměry trubic, nastavit ideální odtok kapaliny z aspirátoru a použít více teploměrů v měřené kapalině.
