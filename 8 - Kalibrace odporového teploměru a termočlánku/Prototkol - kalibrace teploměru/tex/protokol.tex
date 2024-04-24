@@ -22,10 +22,38 @@
 \section{Teoretická část}
 Fázové přechody jsou děje, při kterých látka přechází z jednoho skupenství do jiného. U chemicky čistých látek pozorujeme během fázového přechodu oblast s konstantní teplotou v časové závislosti, kde dochází ke změně skupenství (fáze). U ostatních látek se tato teplota o určitou hodnotu mění.
 
-Termočlánek je složen ze dvou různých kovových vodičů. Tyto vodiče jsou na konci svařené. Podle složení těchto vodičů provádíme kalibraci. Aparatura termočlánku je zobrazena na obrázku.
+\textbf{Termočlánek} je složen ze dvou různých kovových vodičů. Tyto vodiče jsou na konci svařené. Podle složení těchto vodičů provádíme kalibraci. Aparatura termočlánku je zobrazena na obrázku \ref{fig:aparatura-termoclanku} podle [1]. Oblast $S_1$ je srovnávací známé teploty $t_1$. Teplota $t_2$ je měřená teplota. Výhodou je malá tepelná kapacita a tedy nízké ovlivnění teploty měřeného vzorku.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Aparatura termočlánku.png}
+    \caption{Aparatura termočlánku}
+    \label{fig:aparatura-termoclanku}
+\end{figure}
 
+\textbf{Odporový teploměr} měří na základě změny odporu kovu s teplotou. Standardní používané teploměry se vyrábějí z platiny.
 
+V této práci určujeme konstanty $R_0, A, B, a, b, c$ v rovnicích, které popisují závislosti těchto dějů. Pro termočlánek platí v nejjednodušším případě aproximativní kvadratická teplotní závislost
+
+\begin{equation}
+    \epsilon = a + b(t_2 - t_1) + c(t_2 - t_1)^2
+\end{equation}
+
+kde $\epsilon$ je termoelektrické napětí a $(t_2 - t_1)$ je rozdíl teplot na obou koncích vodičů termočlánku.
+
+Pro platinový odporový teploměr platí závislost odporu $R$ na teplotě $t$ platí
+
+\begin{equation}
+    R = R_0 (1 + At + Bt^2)
+\end{equation}
+
+Teplotu varu vody je možné vyjádřit jako
+
+\begin{equation}
+    t_p = 100 + 28,0216 \left( \frac{p}{p_0} - 1 \right) - 11,642 \left( \frac{p}{p_0} - 1 \right)^2 + 7,1 \left( \frac{p}{p_0} - 1 \right)^3
+\end{equation}
+
+kde $p_0$ je normální atmosférický tlak $p_0 = 1,01325 \cdot 10^5 Pa$ a $p$ naměřený tlak.
 
 % ----------------------------------------------------------------------
 %  Výsledky a zpracování měření
@@ -34,7 +62,7 @@ Termočlánek je složen ze dvou různých kovových vodičů. Tyto vodiče jsou
 
 \subsection{Laboratorní podmínky}
 
-    Měření bylo prováděno za laboratorních podmínek uvedených v tabulce \ref{tab:lab_pod}. Pro naše měření je ale důležité, aby hodnoty (jako například teplota vody procházející  trubicí) byly co možná nejvíce podobné po celou dobu.
+    Měření bylo prováděno za laboratorních podmínek uvedených v tabulce \ref{tab:lab_pod}. Pro nás je, ale důležitý naměřený tlak, který ovlivňuje například teplotu varu vody.
 
     \begin{table}[h]
         \centering
@@ -42,15 +70,25 @@ Termočlánek je složen ze dvou různých kovových vodičů. Tyto vodiče jsou
         \hline
             t / °C & p / hPa & vlhkost / \%RH  \\ 
         \hline
-            22,9(4)   & 977,2(20)   & 34,7(25)            \\
+            23,5(4)   & 984(2)   & 37(3)            \\
         \hline
         \end{tabular}
         \caption{Laboratorní podmínky}
         \label{tab:lab_pod}
     \end{table}
 
-\subsection{Podnadpis}
+\subsection{Tání ledu}
+Nejprve změříme odpor při teplotě $0 \; ^\circ C$. Umístíme směs ledu a vody do termosky a měříme vzniklé termoelektrické napětí a zaznamenáváme odpor po časových intervalech. Čekáme, než se ustálí hodnota odporu. Teplota této směsy je právě $0 ^\circ C$, proto ustálená hodnota odporu odpovídá hodnotě $R_0$ z rovnice (2). Pro odporový teploměr dostáváme $R_0 = 101,0(5) \; \Omega$. Nepřesnost měření odporu je 0,5 \%. Tato závislost je zobrazena na obrázku \ref{fig:odpor-na-teplote}.
 
+\subsection{Var vody}
+Jeden konec vodiče necháme v termosce, která má teplotu $t_1 = 0 \; ^\circ C$. Druhý konec umístíme nad zahřívanou vodu. Hodnota varu vody je závislá na atmosférickém tlaku, kterou spočteme podle (3) dosazením laboratorního tlaku.
+
+\begin{equation}
+    \nonumber
+    t_p = 99,2(4) \; ^\circ C
+\end{equation}
+
+kde chyba je spočtena podle metody přenosu chyb.
     
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
