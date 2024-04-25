@@ -78,18 +78,54 @@ kde $p_0$ je normální atmosférický tlak $p_0 = 1,01325 \cdot 10^5 Pa$ a $p$ 
     \end{table}
 
 \subsection{Tání ledu}
-Nejprve změříme odpor při teplotě $0 \; ^\circ C$. Umístíme směs ledu a vody do termosky a měříme vzniklé termoelektrické napětí a zaznamenáváme odpor po časových intervalech. Čekáme, než se ustálí hodnota odporu. Teplota této směsy je právě $0 ^\circ C$, proto ustálená hodnota odporu odpovídá hodnotě $R_0$ z rovnice (2). Pro odporový teploměr dostáváme $R_0 = 101,0(5) \; \Omega$. Nepřesnost měření odporu je 0,5 \%. Tato závislost je zobrazena na obrázku \ref{fig:odpor-na-teplote}.
+Nejprve změříme odpor při teplotě $0 \; ^\circ C$. Umístíme směs ledu a vody do termosky a měříme vzniklé termoelektrické napětí a zaznamenáváme odpor po časových intervalech. Čekáme, než se ustálí hodnota odporu. Teplota této směsy je právě $0 ^\circ C$, proto ustálená hodnota odporu odpovídá hodnotě $R_0$ z rovnice (2). Pro odporový teploměr dostáváme $R_0 = 101,0(5) \; \Omega$. Nepřesnost měření odporu je 0,5 \% plus 0,1 \% z rozsahu. Tato závislost je zobrazena na obrázku \ref{fig:odpor-na-teplote-led}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, tání ledu.png}
+    \caption{Závislost odporu na teplotě pro tání ledu}
+    \label{fig:odpor-na-teplote-led}
+\end{figure}
+
+Pro termočlánek při rozdílu teplot $0 \; ^\circ C$ dostáváme $\epsilon = 1,4(2) \cdot 10^{-6} \; V$. Udávaná chyba zařízení je 90 ppm z měření a 35 ppm z rozsahu. Závislost je promítnuta do grafu.
+
+
+
 
 \subsection{Var vody}
-Jeden konec vodiče necháme v termosce, která má teplotu $t_1 = 0 \; ^\circ C$. Druhý konec umístíme nad zahřívanou vodu. Hodnota varu vody je závislá na atmosférickém tlaku, kterou spočteme podle (3) dosazením laboratorního tlaku.
+
+Jeden konec vodiče termočlánku necháme v termosce, která má teplotu $t_1 = 0 \; ^\circ C$. Druhý konec umístíme nad zahřívanou vodu. Hodnota varu vody je závislá na atmosférickém tlaku, kterou spočteme podle (3) dosazením laboratorního tlaku
 
 \begin{equation}
     \nonumber
     t_p = 99,2(4) \; ^\circ C
 \end{equation}
 
-kde chyba je spočtena podle metody přenosu chyb.
-    
+kde nejistota je odhadnuta podle metody přenosu chyb.
+
+Pro odporový teploměr dostáváme při teplotě varu $R = 138,5(7) \; \Omega$. Tato závislost je zobrazena na grafu \ref{fig:odpor-na-teplote-var}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, var vody.png}
+    \caption{Závislost odporu na teplotě pro tání ledu}
+    \label{fig:odpor-na-teplote-var}
+\end{figure}
+
+Pro termočlánek dostáváme při rozdílu teplot odpovídající teplotě varu hodnotu $\epsilon = 4,24(5) \cdot 10^{-4} \; V$.
+
+\newpage
+\subsection{Tavení cínu}
+
+Bod tuhnutí cínu nastává při teplotě $t_c = 232 \; ^\circ C$. Hodnota odporu je při této teplotě rovna $R = 187,1(9) \; \Omega$. Hodnota $\epsilon = 1,095(1) \cdot 10^{-2} \; V$. Závislost odporu na čase je v grafu \ref{fig:odpor-na-teplote-var}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, tavení cínu.png}
+    \caption{Závislost odporu na teplotě pro tání ledu}
+    \label{fig:odpor-na-teplote-var}
+\end{figure}
+
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
