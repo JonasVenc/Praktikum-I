@@ -83,7 +83,7 @@ Nejprve změříme odpor při teplotě $0 \; ^\circ C$. Umístíme směs ledu a 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, tání ledu.png}
-    \caption{Závislost odporu na teplotě pro tání ledu}
+    \caption{Závislost odporu na čase pro tání ledu}
     \label{fig:odpor-na-teplote-led}
 \end{figure}
 
@@ -108,7 +108,7 @@ Pro odporový teploměr dostáváme při teplotě varu $R = 138,5(7) \; \Omega$.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, var vody.png}
-    \caption{Závislost odporu na teplotě pro tání ledu}
+    \caption{Závislost odporu na čase pro var vody}
     \label{fig:odpor-na-teplote-var}
 \end{figure}
 
@@ -117,15 +117,53 @@ Pro termočlánek dostáváme při rozdílu teplot odpovídající teplotě varu
 \newpage
 \subsection{Tavení cínu}
 
-Bod tuhnutí cínu nastává při teplotě $t_c = 232 \; ^\circ C$. Hodnota odporu je při této teplotě rovna $R = 187,1(9) \; \Omega$. Hodnota $\epsilon = 1,095(1) \cdot 10^{-2} \; V$. Závislost odporu na čase je v grafu \ref{fig:odpor-na-teplote-var}.
+Bod tuhnutí cínu nastává při teplotě $t_c = 232 \; ^\circ C$. Hodnota odporu je při této teplotě rovna $R = 187,1(9) \; \Omega$. Hodnota $\epsilon = 1,095(1) \cdot 10^{-2} \; V$. Závislost odporu na čase je v grafu \ref{fig:odpor-na-teplote-cin}.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, tavení cínu.png}
-    \caption{Závislost odporu na teplotě pro tání ledu}
-    \label{fig:odpor-na-teplote-var}
+    \caption{Závislost odporu na čase pro tavení cínu}
+    \label{fig:odpor-na-teplote-cin}
 \end{figure}
 
+\subsection{Kalibrační křivky}
+Z naměřených hodnot odporu na napětí můžeme sestavit kalibrační křivku. Hodnoty jsou zaneseny do grafu \ref{fig:krivka-odpor} odporového teploměru a \ref{fig:krivka-termoclanek} termočlánku a je zde také sestrojen polynomiální fit se stupněm 2. Odtud získáme hledané konstanty.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, parabola.png}
+    \caption{Kalibrační křivka pro odporový teploměr}
+    \label{fig:krivka-odpor}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost epsilon na delta T, parabola.png}
+    \caption{Kalibrační křivka termočlánku}
+    \label{fig:krivka-termoclanek}
+\end{figure}
+
+Po dosazení do rovnice (1) tedy máme
+
+\begin{align*}
+    a = 1,4(2) \cdot 10^{-6} \; V\\
+    b = -2,8(1) \cdot 10^{-5} \; \frac{V}{^\circ C}\\
+    c = 3,2(2) \cdot 10^{-7} \; \frac{V}{^\circ C^2} \\
+\end{align*}
+
+kde chyba koeficientů b, c je 5 \%.
+
+Po dosazení do rovnice (2) dostáváme
+
+\begin{align*}
+    R_0 = 101,0(5) \; \Omega \\
+    A = 0,38(2) \; \frac{1}{^\circ C} \\
+    B = -2,9(1) \cdot 10^{-5} \; \frac{1}{^\circ C^2} \\
+\end{align*}
+
+kde chyba koeficientů A, B je opět 5 \%.
+
+\newpage
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
