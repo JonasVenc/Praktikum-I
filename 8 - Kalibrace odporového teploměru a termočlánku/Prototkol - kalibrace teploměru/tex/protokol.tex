@@ -89,7 +89,14 @@ Nejprve změříme odpor při teplotě $0 \; ^\circ C$. Umístíme směs ledu a 
 
 Pro termočlánek při rozdílu teplot $0 \; ^\circ C$ dostáváme $\epsilon = 1,4(2) \cdot 10^{-6} \; V$. Udávaná chyba zařízení je 90 ppm z měření a 35 ppm z rozsahu. Závislost je promítnuta do grafu.
 
+Na obrázku \ref{fig:napeti-na-cas-led} vidíme časovou závislost naměřeného napětí.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost epsilon na čase, led.png}
+    \caption{Časová závislost napětí tání ledu}
+    \label{fig:napeti-na-cas-led}
+\end{figure}
 
 
 \subsection{Var vody}
@@ -114,6 +121,15 @@ Pro odporový teploměr dostáváme při teplotě varu $R = 138,5(7) \; \Omega$.
 
 Pro termočlánek dostáváme při rozdílu teplot odpovídající teplotě varu hodnotu $\epsilon = 4,24(5) \cdot 10^{-4} \; V$.
 
+Na obrázku \ref{fig:napeti-na-case-var} je znázorněný časové průběh naměřeného napětí. V čase 885 s bylo vypnuto topení, což se projevuje na grafu ukončením růstu.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost epsilon na čase, var.png}
+    \caption{Časová závislost napětí var vody}
+    \label{fig:napeti-na-case-var}
+\end{figure}
+
 \newpage
 \subsection{Tavení cínu}
 
@@ -124,6 +140,15 @@ Bod tuhnutí cínu nastává při teplotě $t_c = 232 \; ^\circ C$. Hodnota odpo
     \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost R na t, tavení cínu.png}
     \caption{Závislost odporu na čase pro tavení cínu}
     \label{fig:odpor-na-teplote-cin}
+\end{figure}
+
+V grafu \ref{fig:napeti-na-case-cin} je zobrazena časové závislost napětí během tavení cínu. V čase 2760 s bylo zapnuto zahřívání, což je vidět na grafu.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost epsilon na čase, cín.png}
+    \caption{Časová závislost napětí tavení cínu}
+    \label{fig:napeti-na-case-cin}
 \end{figure}
 
 \subsection{Kalibrační křivky}
@@ -169,7 +194,31 @@ kde chyba koeficientů A, B je opět 5 \%.
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Z grafů časových závislostí je vidět výrazná podobnost při měření odporu a napětí. U vypočítaných koeficientů zde byla určena také nepřesnost daná nepřesností měřících přístrojů. Konkrétní hodnoty jsou popsány výše. Vliv na přesnost výsledků mají však i jiné faktory, než jenom tento. Je třeba uvážit, že teploměry mohou mít navzájem zpoždění, tedy nemusejí ve stejnou chvíli zobrazovat aktuální hodnoty. Navíc samotné teploměry pracují s určitou nepřesností, která není uvažována. Dále chyba může vznikat způsobem tohoto zapojení. Bylo by možné použít více bodový teploměr, který by měřený výsledek zpřesňoval díky více počtů měřidel. Samozřejmě uvažujeme dokonale čistou aparaturu i vzorky, ve skutečnosti však tyto vzorky již mohou být kontaminované nečistoty. Nepoužíváme míchadlo a teplotu měříme v jednom bodě, což může například u destilované vody měřit jednu teploty, zatímco v kádince může být u dna jiná teplota, než u hladiny. Nakonec můžeme také uvážit lidský faktor, díky kterému se opisované hodnoty mohou nepatrně lišit.
+
+U grafů je možné vidět nepořádek v označeních veličin způsobené jedním typem používaném v zadání a druhým obecně používaných. Proto je dobré podívat se i na jednotku a předejít tak nedorozuměním. Například u symbolu $T$ je jednotka $^\circ C$, kde bychom zřejmě mohly uvažovat $K$, ale protože se jedná o rozdíl teplot, jednotky nehrají roli.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
 \section{Závěr}
+
+V této práci jsme okalibrovali pomocí bodu tání ledu, bodu varu vody a bodu tuhnutí cínu odporový teploměr a termočlánek. získali jsme tyto koeficienty
+
+\begin{align*}
+    a = 1,4(2) \cdot 10^{-6} \; V\\
+    b = -2,8(1) \cdot 10^{-5} \; \frac{V}{^\circ C}\\
+    c = 3,2(2) \cdot 10^{-7} \; \frac{V}{^\circ C^2} \\
+\end{align*}
+
+\begin{align*}
+    R_0 = 101,0(5) \; \Omega \\
+    A = 0,38(2) \; \frac{1}{^\circ C} \\
+    B = -2,9(1) \cdot 10^{-5} \; \frac{1}{^\circ C^2} \\
+\end{align*}
+
+Dále jsme zaregistrovali časový průběh termoelektrického napětí termočlánku $\epsilon (\tau)$ a odporu platinového teploměru $R(\tau)$ při ohřevu a varu vody a při tuhnutí cínu a graficky znázornili.
+
+Nakreslili jsme graf teplotní závislosti odporu $R$ a graf teplotní závislosti termoelektrického napětí $\epsilon$.
+
+ Nakonec jsme určili časové závislosti $t_R(\tau)$ a $t_\epsilon(\tau)$ teplot měřených odporovým teploměrem a termočlánkem při ohřevu vody a tuhnutí cínu.
