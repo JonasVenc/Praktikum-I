@@ -151,6 +151,7 @@ V grafu \ref{fig:napeti-na-case-cin} je zobrazena časové závislost napětí b
     \label{fig:napeti-na-case-cin}
 \end{figure}
 
+\newpage
 \subsection{Kalibrační křivky}
 Z naměřených hodnot odporu na napětí můžeme sestavit kalibrační křivku. Hodnoty jsou zaneseny do grafu \ref{fig:krivka-odpor} odporového teploměru a \ref{fig:krivka-termoclanek} termočlánku a je zde také sestrojen polynomiální fit se stupněm 2. Odtud získáme hledané konstanty.
 
@@ -187,6 +188,24 @@ Po dosazení do rovnice (2) dostáváme
 \end{align*}
 
 kde chyba koeficientů A, B je opět 5 \%.
+\newpage
+\subsection{Časové závislosti}
+
+S využitím časových závislostí odporu a napětí a rovnic s vypočítanými koeficienty, můžeme sestrojit graf závislosti teploty na čase \ref{fig:teplota-na-case-var} a \ref{fig:telota-na-case-cin}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost teploty na čase, var.png}
+    \caption{Časová závislost teploty pro var vody}
+    \label{fig:teplota-na-case-var}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{8 - Kalibrace odporového teploměru a termočlánku//Prototkol - kalibrace teploměru//img/Závislost teploty na čase, cín.png}
+    \caption{Časová závislost teploty pro var vody}
+    \label{fig:telota-na-case-cin}
+\end{figure}
 
 \newpage
 % ----------------------------------------------------------------------
@@ -194,10 +213,13 @@ kde chyba koeficientů A, B je opět 5 \%.
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
-Z grafů časových závislostí je vidět výrazná podobnost při měření odporu a napětí. U vypočítaných koeficientů zde byla určena také nepřesnost daná nepřesností měřících přístrojů. Konkrétní hodnoty jsou popsány výše. Vliv na přesnost výsledků mají však i jiné faktory, než jenom tento. Je třeba uvážit, že teploměry mohou mít navzájem zpoždění, tedy nemusejí ve stejnou chvíli zobrazovat aktuální hodnoty. Navíc samotné teploměry pracují s určitou nepřesností, která není uvažována. Dále chyba může vznikat způsobem tohoto zapojení. Bylo by možné použít více bodový teploměr, který by měřený výsledek zpřesňoval díky více počtů měřidel. Samozřejmě uvažujeme dokonale čistou aparaturu i vzorky, ve skutečnosti však tyto vzorky již mohou být kontaminované nečistoty. Nepoužíváme míchadlo a teplotu měříme v jednom bodě, což může například u destilované vody měřit jednu teploty, zatímco v kádince může být u dna jiná teplota, než u hladiny. Nakonec můžeme také uvážit lidský faktor, díky kterému se opisované hodnoty mohou nepatrně lišit.
+Z grafů časových závislostí je vidět výrazná podobnost při měření odporu a napětí. Při porovnání časových závislostí teplot pro var vody se vypočtené křivky příliš neshodují. Zřejmě není dobře dosazeno do rovnice pro výpočet teploty z odporu. Na druhou stranu pro tavení cínu zde pozorujeme korelaci obou křivek. Drobné odchylky mohou být způsobeny nepřesnostmi popsané dále.
+
+U vypočítaných koeficientů zde byla určena také nepřesnost daná nepřesností měřících přístrojů. Konkrétní hodnoty jsou popsány výše. Vliv na přesnost výsledků mají však i jiné faktory, než jenom tento. Je třeba uvážit, že teploměry mohou mít navzájem zpoždění, tedy nemusejí ve stejnou chvíli zobrazovat aktuální hodnoty. Navíc samotné teploměry pracují s určitou nepřesností, která není uvažována. Dále chyba může vznikat způsobem tohoto zapojení. Bylo by možné použít více bodový teploměr, který by měřený výsledek zpřesňoval díky více počtů měřidel. Samozřejmě uvažujeme dokonale čistou aparaturu i vzorky, ve skutečnosti však tyto vzorky již mohou být kontaminované nečistoty. Nepoužíváme míchadlo a teplotu měříme v jednom bodě, což může například u destilované vody měřit jednu teploty, zatímco v kádince může být u dna jiná teplota, než u hladiny. Nakonec můžeme také uvážit lidský faktor, díky kterému se opisované hodnoty mohou nepatrně lišit.
 
 U grafů je možné vidět nepořádek v označeních veličin způsobené jedním typem používaném v zadání a druhým obecně používaných. Proto je dobré podívat se i na jednotku a předejít tak nedorozuměním. Například u symbolu $T$ je jednotka $^\circ C$, kde bychom zřejmě mohly uvažovat $K$, ale protože se jedná o rozdíl teplot, jednotky nehrají roli.
 
+\newpage
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
