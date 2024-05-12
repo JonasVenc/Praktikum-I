@@ -105,9 +105,11 @@ Naměřené hodnoty jsou uvedeny v tabulce \ref{tab:namerene-hodnoty}. U každé
 \end{tabular}
 \end{table}
 
+\newpage
+
 Abychom mohly ukázat teoretickou závislost je třeba určit konstanty například na začátku měření, tedy v přízemí. Hustota vzduchu je při těchto podmínkách $\rho_0 = 1,157 \; kg/m^3$. Hodnota $p_0 = 98 788 \; Pa$.
 
-Na obrázku \ref{fig:tlak-na-vysce} je zobrazena závislost atmosférického tlaku na nadmořské výšce. Jsou zde uvedeny hodnoty $p_1$, $p_2$ a $p_t$, která popisuje teoretickou nadmořskou výšku získanou z rovnice (3) dosazením konstant naměřených na počátku měření uvedených výše. Dále jsme naši naměřenou závislost fitovali exponenciální křivkou podle vztahu $p = A \; e^{R_0 \Delta h}$
+Na obrázku \ref{fig:tlak-na-vysce} je zobrazena závislost atmosférického tlaku na nadmořské výšce. Jsou zde uvedeny hodnoty $p_1$, $p_2$ a $p_t$, která popisuje teoretickou nadmořskou výšku získanou z rovnice (3) dosazením konstant naměřených na počátku měření uvedených výše. Dále jsme naši naměřenou závislost fitovali exponenciální křivkou podle vztahu $p = A \; e^{R_0 \Delta h}$. Dostáváme $A = 5,8(7) \; kPa$ a $R_0 = -0,0022(3)$.
 
 \begin{figure}[h]
     \centering
@@ -115,13 +117,26 @@ Na obrázku \ref{fig:tlak-na-vysce} je zobrazena závislost atmosférického tla
     \caption{Závislost atmosférického tlaku na nadmořské výšce}
     \label{fig:tlak-na-vysce}
 \end{figure}
-    
+
+\newpage
 % ----------------------------------------------------------------------
 %  Diskuse výsledků
 % ----------------------------------------------------------------------			
 \section{Diskuse výsledků}
 
+Naměřené hodnoty obou měření ($p_1$ a $p_2$) se shodují s předpokládanou teoretickou hodnotou. Naměřené hodnoty pomocí hodinek velmi přesně odpovídají výškovému rozdílu pater, avšak jsou všechny hodnoty posunuté o 27 m. n. m. To pravděpodobně znamená, že nebyly přesně kalibrovány, ale samotný barometr hodinek měří spolehlivě přesně. Lze odvozovat, že tato metoda měření je přesná a dobře popisuje realitu.
+
+Samotná přesnost barometru telefonu je 1 hPa, která ve srovnaní s okolnostmi neovlivňuje výsledek a my ji tak můžeme zanedbat.
+
+Mezi tyto okolnosti se řadí uvažování rovnice pro ideální laboratorní podmínky, které se mohou lišit od skutečnosti. Změna teploty s výškou by mohla mít vliv na měření, my jsme ale předpokládali konstantní teploty v celé budově. Protože jsme měřili na uzavřeném únikovém schodišti hodnoty tlaku mohly ovlivnit jednotlivé vrstvy budovy.
+
+Naši závislost jsme fitovali exponenciální funkcí, jejíž hodnota koeficientu A vyšla přibližně 20x menší, než bychom mohli očekávat. Zdá se, že jsou špatně nastavené parametry fitu, ale to bylo několikrát zkontrolováno a provedeno znovu. Koeficient $R_0$ vychází dle očekávání. Lze předpokládat, že je výškový rozdíl natolik malý, že se daná závislost neprojeví. Na druhou stranu teoretická závislost se shoduje s naměřenými hodnotami, tak by měl být i fit podobný.
+
 % ----------------------------------------------------------------------
 %  Závěr
 % ----------------------------------------------------------------------
+\newpage
+
 \section{Závěr}
+
+V této práci jsme změřili závislost atmosférického tlaku na výšce. Dále jsme sestrojili graf této závislosti a porovnali jsme ho s barometrickou rovnicí. Naměřené hodnoty jsme fitovali exponenciální funkcí s koeficienty $A = 5,8(7) \; kPa$ a $R_0 = -0,0022(3)$. Navíc jsme zároveň provedli srovnávací měření druhým barometrem, kde jsme potvrdili přesnost s pravděpodobně ne úplně přesnou kalibrací zařízení na začátku měření.
